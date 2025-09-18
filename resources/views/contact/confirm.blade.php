@@ -66,7 +66,7 @@
 
           <div class="edit">
               {{-- 修正ボタン --}}
-              <form method="get" action="{{ route('top') }}">
+              <form method="get" action="{{ route('top') }}" onsubmit="sessionStorage.setItem('scrollToJump5', 'true');">
                   <div class="edit-btn">
                     <button type="submit" style="color:#E9E3DD;">修正する</button>
                   </div>

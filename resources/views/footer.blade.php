@@ -11,7 +11,7 @@
                 <li class="information-item">所在地<br>xxxxxxxxxxxxx</li>
                 <li class="information-item">TEL📞<br>xxx-xxx-xxxx</li>
                 <li class="information-item">Mail✉<br>xxx-xxx-xxxx</li>
-                <li class="information-item"><a href="top.php" id="page-top">TOP</a></li>
+                <li class="information-item"><a href="{{route('top')}}" id="page-top">TOP</a></li>
             </ul>
             </div>
             </footer>
