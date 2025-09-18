@@ -59,9 +59,9 @@
           <p>フリガナ：{{ $data['furigana'] }}</p>
           <p>メールアドレス：{{ $data['email'] }}</p>
           <p>電話番号：{{ $data['tel'] ?? '' }}</p>
-          <p>郵便番号：{{ $data['postcode'] ?? '' }}</p>
-          <p>都道府県：{{ $data['pref'] ?? '' }}</p>
-          <p>町域番地：{{ $data['address'] ?? '' }}</p>
+          <p>郵便番号：{{ $data['postcode'] }}</p>
+          <p>都道府県：{{ $data['pref'] }}</p>
+          <p>町域番地：{{ $data['address'] }}</p>
           <p>建物名・部屋番号：{{ $data['building'] ?? '' }}</p>
 
           <div class="edit">
