@@ -273,4 +273,11 @@ window.addEventListener("DOMContentLoaded", () => {
             if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
+
+   // --- confirm画面 修正ボタンクリックでjump5までスクロール ---
+    if (sessionStorage.getItem('scrollToJump5')) {
+        const el = document.getElementById('jump5');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        sessionStorage.removeItem('scrollToJump5');
+    }
 });

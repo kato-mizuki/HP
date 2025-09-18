@@ -60,13 +60,13 @@
           <p>メールアドレス：{{ $data['email'] }}</p>
           <p>電話番号：{{ $data['tel'] ?? '' }}</p>
           <p>郵便番号：{{ $data['postcode'] }}</p>
-          <p>都道府県：{{ $data['pref'] }}</p>
+          <p>都道府県：{{ $data['pref'] ?? '（未入力）' }}</p>
           <p>町域番地：{{ $data['address'] }}</p>
           <p>建物名・部屋番号：{{ $data['building'] ?? '' }}</p>
 
           <div class="edit">
               {{-- 修正ボタン --}}
-              <form method="get" action="{{ route('top') }}" onsubmit="sessionStorage.setItem('scrollToJump5', 'true');">
+              <form method="get" action="{{ route('top') }}">
                   <div class="edit-btn">
                     <button type="submit" style="color:#E9E3DD;">修正する</button>
                   </div>

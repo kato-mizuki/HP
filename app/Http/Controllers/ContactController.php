@@ -20,14 +20,16 @@ class ContactController extends Controller
         // サーバーサイドバリデーション
         // バリデーション
         $validated = $request->validate([
+            'inquiry'       => 'required|array|min:1',
             'comment'       => 'required|string|max:500',
             'name'          => 'required|string|max:50',
             'furigana'      => 'required|string|max:50',
             'email'         => 'required|email',
             'tel'           => 'nullable|regex:/^\d{10,11}$/',
-            'postcode'      => 'nullable|regex:/^\d{3}-?\d{4}$/',
-            'address'       => 'nullable|string|max:100',
-            'inquiry'       => 'required|array|min:1',
+            'postcode'      => 'required|regex:/^\d{3}-?\d{4}$/',
+            'pref'          => 'required|string',
+            'address'       => 'required|string|max:100',
+            'building'      => 'nullable|string',
             'programming'   => 'required',
         ]);
 
