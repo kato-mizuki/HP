@@ -1,0 +1,128 @@
+/* ------------------------------------
+ 全体の設定 
+------------------------------------*/
+    #header {
+      display: flex;
+      justify-content: space-between; /* 左右に配置 */
+      align-items: center;            /* 高さ中央揃え */
+      width: 100%;
+      background-color: var(--main-color);    /* ← 背景色を header に付ける */
+      padding: 0;
+      box-sizing: border-box;
+    }
+/* カラーパレット→書き方を変更することで色の変更をカラーパレットのみでできる*/
+    :root{
+      --main-color: #A92708;   /* メインの赤 */
+      --sub-color: #E9E3DD;    /* ベージュ */
+      --text-color: #3C0F0A;   /* 文字色 */
+      --hover-color: #ff8d8d;  /* ホバー時 */
+      --shadow: 0 8px 24px rgba(16,16,16,0.06);
+      --wrap-max: 1100px;
+    }
+
+/* 画面幅が600px以下の場合のスタイル */
+    @media screen and (min-width: 600px) {
+      .wrapper {
+        display: flex;
+        gap: 2%; /* カラム間の余白 */
+      }
+      #aside {
+        flex: 1; /* 自動で分配 */
+      }
+      #main {
+        flex: 1;
+      }
+    }
+
+/* 画面幅が900px以上の場合のスタイル */
+    @media screen and (min-width: 900px) {
+      body {
+        font-size: 18px;                          /* 文字サイズ */
+        font-family: "Yu Mincho", "Times New Roman", serif;
+      }
+    }
+    
+    body {
+      display: block;                             /* ブロックレベル要素として表示 */
+      background-color: var(--sub-color);                 /* 背景色 */
+      font-size: 16px;                            /* 文字サイズ */
+      color: var(--text-color);                            /* 文字色 */
+      max-width: 100%;                            /* 要素の幅の最大値 */
+      margin: 0 auto;                             /* ブロックレベル要素を中央揃え */
+      padding: 0;                                 /* 要素内部の余白 */
+      overflow-x : hidden ;                       /* 横スクロールをできないようにする */
+      width: 100%;
+      height: 100%;
+      font-family: "Yu Mincho", "Times New Roman", serif;
+    }
+    h1 { 
+      font-size: 2.4rem; /* 24px */               /* 文字サイズ */
+    }
+    p {                                           /* 文字サイズ */
+       font-size: 1.4rem; /* 14px */
+    }
+    hr {
+      height: 2px;                                /* 高さを固定 */
+      background-color: var(--main-color);                /* 背景色 */
+      width: 100% ;                               /* 幅を固定 */
+      border: none;                               /* 枠線を消す */
+    }
+
+/* section11：お問い合わせの設定 */
+  /* 画像の設定 */
+    .section11 {
+     position: center;                           /* 要素の現在位置を基準にした相対位置に要素を配置 */ 
+     text-align: center;                           /* 内部のリンクテキストは中央揃え */
+    }
+  /* ボタンを横並びする設定 */
+    .edit {
+      display: flex;
+      gap: 20px;                             /* ボタンの間にスペース */
+      justify-content: center;               /* 中央寄せしたい場合 */
+      color: var(--sub-color);                      /* 文字色を指定 */
+    }
+
+    .edit form {
+      margin: 0;         /* デフォルトの余白を消す */
+    }
+    /* ボタンの設定 */
+    .edit-btn {
+      display: block;                              /* ブロックレベル要素として表示 */
+      justify-content: center;                     /* コンテナ内で中央寄せ */
+      white-space: nowrap;                         /* テキストを一行にする */
+    }
+
+    .edit-btn button{
+      padding: 20px;                               /* 要素内部の余白 */
+      background-color: var(--main-color);                   /* 背景色 */
+      color: var(--main-color);                       /* 文字色 */
+      border-radius: 20px;                         /* 角の丸み */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0) ;   /* 影の設定 */
+    }
+/* カーソルを置いた時の背景色 */
+    .edit-btn:hover a{
+      background-color: var(--hover-color);                  /* 背景色 */
+    }
+
+    button:hover {
+      cursor: pointer;                              /*指マークに変更 */
+    }
+
+/* 確認画面のエラーメッセージ */
+.error {
+    color: var(--main-color);            /* 文字色 */
+    background-color: var(--sub-color);  /* 背景色 */
+    padding: 15px;                       /* 内側の余白 */
+    border-radius: 8px;                  /* 角丸 */
+    margin-bottom: 20px;                 /* 下に余白 */
+    font-weight: bold;                   /* 文字を強調 */
+}
+
+.error ul {
+    margin: 10px 0 0 20px;               /* 箇条書きのインデント */
+    padding: 0 0 20px 0;
+}
+
+.error li {
+    margin-bottom: 10px;                  /* 各エラーの下に余白 */
+}

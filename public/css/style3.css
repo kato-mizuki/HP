@@ -1,0 +1,86 @@
+/* ------------------------------------
+ 全体の設定 
+------------------------------------*/
+    #header {
+      display: flex;
+      justify-content: space-between; /* 左右に配置 */
+      align-items: center;            /* 高さ中央揃え */
+      width: 100%;
+      background-color: var(--main-color);      /*  背景色を header に付ける */
+      padding: 0;
+      box-sizing: border-box;
+    }
+/* カラーパレット→書き方を変更することで色の変更をカラーパレットのみでできる*/
+    :root{
+      --main-color: #A92708;   /* メインの赤 */
+      --sub-color: #E9E3DD;    /* ベージュ */
+      --text-color: #3C0F0A;   /* 文字色 */
+      --hover-color: #ff8d8d;  /* ホバー時 */
+      --shadow: 0 8px 24px rgba(16,16,16,0.06);
+      --wrap-max: 1100px;
+    }
+
+/* 画面幅が600px以下の場合のスタイル */
+    @media screen and (min-width: 600px) {
+      .wrapper {
+        display: flex;
+        gap: 2%; /* カラム間の余白 */
+      }
+      #aside {
+        flex: 1; /* 自動で分配 */
+      }
+      #main {
+        flex: 1;
+      }
+    }
+
+/* 画面幅が900px以上の場合のスタイル */
+    @media screen and (min-width: 900px) {
+      body {
+        font-size: 18px;                          /* 文字サイズ */
+      }
+    }
+    
+    body {
+      display: block;                             /* ブロックレベル要素として表示 */
+      background-color:var(--sub-color);                   /* 背景色 */
+      font-size: 16px;                            /* 文字サイズ */
+      color:var(--text-color);                               /* 文字色 */
+      max-width: 100%;                           /* 要素の幅の最大値 */
+      margin: 0 auto;                             /* ブロックレベル要素を中央揃え */
+      padding: 0;                                 /* 要素内部の余白 */
+      overflow-x : hidden ;                       /* 横スクロールをできないようにする */
+      width: 100%;
+      height: 100%;
+    }
+    h1 { 
+      font-size: 2.4rem; /* 24px */               /* 文字サイズ */
+    }
+    p {                                           /* 文字サイズ */
+       font-size: 1.4rem; /* 14px */
+    }
+    hr {
+      height: 2px;                                /* 高さを固定 */
+      background-color: var(--main-color);                  /* 背景色 */
+      width: 100% ;                               /* 幅を固定 */
+      border: none;                               /* 枠線を消す */
+    }
+  /* aタグの設定 */
+    a {
+      height:60px;                                 /* 高さを固定 */
+      margin-right: 35px;                          /* 要素の外側の余白を設定 */
+      margin-left:50px;                            /* 要素の外側の余白を設定 */
+      color: var(--sub-color);                              /* 文字色 */
+      text-decoration:none;
+      letter-spacing:.1em;
+      text-align: center;
+    }
+    h1 {
+    text-align: center;                          /* 内部のリンクテキストは中央揃え */
+    }
+    
+    div.comment {
+      width: 100%;
+      margin: 0 auto;                          /* 横方向の中央揃え */
+      text-align: center;                      /* 中のテキストも中央揃え */
+    }
