@@ -48,7 +48,7 @@
    git clone https://github.com/kato-mizuki/HP.git
    cd HP
 2. 依存パッケージをインストール
-   composer install
+    composer install
     npm install
     npm run dev
 3. .envファイルを作成し、必要な設定を追加
@@ -57,7 +57,7 @@
 4. サーバー起動
     php artisan serve
 
-##　メール送信設定
+## メール送信設定
 .envに以下のように設定してください（例Gmail）
     MAIL_MAILER=smtp
     MAIL_HOST=smtp.gmail.com
