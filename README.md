@@ -62,7 +62,7 @@
 
 ## メール送信設定
  .envに以下のように設定してください（例Gmail）:  
-    ```dotenv
+    ```
     MAIL_MAILER=smtp  
     MAIL_HOST=smtp.gmail.com  
     MAIL_PORT=587  
@@ -71,6 +71,7 @@
     MAIL_ENCRYPTION=tls  
     MAIL_FROM_ADDRESS=your_email@gmail.com  
     MAIL_FROM_NAME="サイト名"  
+    ```
 -その他のメールサービス（Yahoo, Outlook, iCloud など）にも対応可能です。  
 
 ## ライセンス
