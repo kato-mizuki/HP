@@ -71,8 +71,8 @@
     MAIL_ENCRYPTION=tls
     MAIL_FROM_ADDRESS=your_email@gmail.com
     MAIL_FROM_NAME="サイト名"
-    
--その他のメールサービス（Yahoo, Outlook, iCloud など）にも対応可能です。  
+
+- その他のメールサービス（Yahoo, Outlook, iCloud など）にも対応可能です。  
 
 ## ライセンス
 
