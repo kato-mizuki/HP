@@ -57,11 +57,12 @@
     cp .env.example .env  
     php artisan key:generate  
 4. サーバー起動  
+    ```bash
     php artisan serve  
 
 ## メール送信設定
  .envに以下のように設定してください（例Gmail）  
-    ```bash
+    dotenv
     MAIL_MAILER=smtp  
     MAIL_HOST=smtp.gmail.com  
     MAIL_PORT=587  
