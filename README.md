@@ -61,7 +61,8 @@
     php artisan serve  
 
 ## メール送信設定
- .envに以下のように設定してください（例Gmail）:  
+ .envに以下のように設定してください（例Gmail）:
+
     MAIL_MAILER=smtp
     MAIL_HOST=smtp.gmail.com
     MAIL_PORT=587
