@@ -48,33 +48,32 @@
    git clone https://github.com/kato-mizuki/HP.git
    cd HP
 2. 依存パッケージをインストール
-    composer install
-    npm install
-    npm run dev
-3. .envファイルを作成し、必要な設定を追加
-    cp .env.example .env
-    php artisan key:generate
-4. サーバー起動
-    php artisan serve
+    composer install  
+    npm install  
+    npm run dev  
+3. .envファイルを作成し、必要な設定を追加  
+    cp .env.example .env  
+    php artisan key:generate  
+4. サーバー起動  
+    php artisan serve  
 
 ## メール送信設定
-.envに以下のように設定してください（例Gmail）
-    MAIL_MAILER=smtp
-    MAIL_HOST=smtp.gmail.com
-    MAIL_PORT=587
-    MAIL_USERNAME=your_email@gmail.com
-    MAIL_PASSWORD=your_app_password
-    MAIL_ENCRYPTION=tls
-    MAIL_FROM_ADDRESS=your_email@gmail.com
-    MAIL_FROM_NAME="サイト名"
-その他のメールサービス（Yahoo, Outlook, iCloud など）にも対応可能です。
+.envに以下のように設定してください（例Gmail）  
+    MAIL_MAILER=smtp  
+    MAIL_HOST=smtp.gmail.com  
+    MAIL_PORT=587  
+    MAIL_USERNAME=your_email@gmail.com  
+    MAIL_PASSWORD=your_app_password  
+    MAIL_ENCRYPTION=tls  
+    MAIL_FROM_ADDRESS=your_email@gmail.com  
+    MAIL_FROM_NAME="サイト名"  
+その他のメールサービス（Yahoo, Outlook, iCloud など）にも対応可能です。  
 
 ## ライセンス
 
----
 このリポジトリのコードは MIT ライセンスのもとで公開されています。
-    💡 ポイント
-    - プロジェクトの概要、機能、使用技術、セットアップ手順を明確に記載
-    - メール送信設定例も書いているので、開発者がすぐ動かせる
-    - 必要に応じて「フォームバリデーション」の詳細も追記可能
----
+
+💡 ポイント
+- プロジェクトの概要、機能、使用技術、セットアップ手順を明確に記載
+- メール送信設定例も書いているので、開発者がすぐ動かせる
+- 必要に応じて「フォームバリデーション」の詳細も追記可能
