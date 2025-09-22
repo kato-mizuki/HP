@@ -62,7 +62,7 @@
 
 ## メール送信設定
  .envに以下のように設定してください（例Gmail）:  
-    ```
+    ```bash
     MAIL_MAILER=smtp  
     MAIL_HOST=smtp.gmail.com  
     MAIL_PORT=587  
