@@ -1,6 +1,6 @@
 # HP - 不動産サイト
 
-このリポジトリは、加藤瑞貴さんが作成した不動産関連のウェブサイトのソースコードです。  
+このリポジトリは、不動産関連のウェブサイトのソースコードです。  
 サイトは「空き家管理・売却・相続」の相談を受け付けるフォームを備えています。
 
 ## 目次
@@ -38,7 +38,7 @@
 
 ## 使用技術
 
-- PHP 8.x / Laravel 10
+- PHP 8.0.30 / Laravel 9.52.20
 - HTML5 / CSS3 / JavaScript
 - Laravel Blade テンプレート
 - ClosedXML（Excel 出力）
@@ -50,3 +50,17 @@
    ```bash
    git clone https://github.com/kato-mizuki/HP.git
    cd HP
+2. 依存パッケージをインストール
+   composer install
+    npm install
+    npm run dev
+3. .envファイルを作成し、必要な設定を追加
+    cp .env.example .env
+    php artisan key:generate
+4. サーバー起動
+    php artisan serve
+
+💡 ポイント
+- プロジェクトの概要、機能、使用技術、セットアップ手順を明確に記載
+- メール送信設定例も書いているので、開発者がすぐ動かせる
+- 必要に応じて「Excel 出力」や「フォームバリデーション」の詳細も追記可能
