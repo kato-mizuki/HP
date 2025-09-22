@@ -17,6 +17,7 @@ class ContactController extends Controller
     // 確認画面
     public function confirm(Request $request)
     {
+        $data = $request->all();
         // サーバーサイドバリデーション
         // バリデーション
         $validated = $request->validate([
@@ -62,12 +63,18 @@ class ContactController extends Controller
             ]);
         }
     }
+    // public function edit(Request $request)
+    // {
+    //     // セッションに入力内容を戻す
+    //     $request->session()->put('form', $request->all());
+
+    //     // TOPページに表示（$dataで値を埋める）
+    //     return redirect()->route('top')->withInput($request->all());
+    // }
+
     public function edit(Request $request)
     {
-        // セッションに入力内容を戻す
-        $request->session()->put('form', $request->all());
-
-        // TOPページに表示（$dataで値を埋める）
-        return redirect()->route('top')->withInput($request->all());
+        // セッションに保存している form データを old() に流す
+        return redirect()->to(route('top') . '#jump5')->withInput($request->session()->get('form'));
     }
 }

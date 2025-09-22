@@ -25,7 +25,7 @@
               </ul>
 
               {{-- 修正するボタン --}}
-              <form method="get" action="{{ route('top') }}">
+              <form method="post" action="{{ route('edit') }}">
                   {{-- 入力値をセッションではなく old() で戻す --}}
                   <div class="edit-btn">
                     <button type="submit" style="color:#E9E3DD;">修正する</button>
@@ -66,7 +66,8 @@
 
           <div class="edit">
               {{-- 修正ボタン --}}
-              <form method="get" action="{{ route('top') }}">
+              <form method="post" action="{{ route('edit') }}">
+                @csrf
                   <div class="edit-btn">
                     <button type="submit" style="color:#E9E3DD;">修正する</button>
                   </div>

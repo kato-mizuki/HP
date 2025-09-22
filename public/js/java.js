@@ -273,11 +273,13 @@ window.addEventListener("DOMContentLoaded", () => {
             if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
+});
 
-   // --- confirm画面 修正ボタンクリックでjump5までスクロール ---
-    if (sessionStorage.getItem('scrollToJump5')) {
-        const el = document.getElementById('jump5');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-        sessionStorage.removeItem('scrollToJump5');
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.hash === "#jump5") {
+        // まずスクロールさせる（ブラウザ標準挙動を待つ）
+        setTimeout(() => {
+            history.replaceState(null, null, window.location.pathname);
+        }, 100); // 0.1秒待ってから消す
     }
 });

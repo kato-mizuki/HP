@@ -329,11 +329,11 @@
               <div class="checkbox">
                 <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
                 <p id="inquiryError" class="error">&nbsp;</p>
-                <input type="checkbox" id="inq1" name="inquiry[]" value="空き家の管理に関するご相談">
+                <input type="checkbox" id="inq1" name="inquiry[]" value="空き家の管理に関するご相談" {{ in_array('空き家の管理に関するご相談', old('inquiry', [])) ? 'checked' : '' }}>
                 <label for="inq1">例: 空き家の管理に関するご相談</label><br>
-                <input type="checkbox" id="inq2" name="inquiry[]" value="空き家の売却に関するご相談">
+                <input type="checkbox" id="inq2" name="inquiry[]" value="空き家の売却に関するご相談" {{ in_array('空き家の売却に関するご相談', old('inquiry', [])) ? 'checked' : '' }}>
                 <label for="inq2">例: 空き家の売却に関するご相談</label><br>
-                <input type="checkbox" id="inq3" name="inquiry[]" value="その他">
+                <input type="checkbox" id="inq3" name="inquiry[]" value="その他"{{ in_array('その他', old('inquiry', [])) ? 'checked' : '' }}>
                 <label for="inq3">例: その他</label>
               </div>
               <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
@@ -426,7 +426,7 @@
           <div class="agree">【個人情報の取り扱いについて】にご同意いただける場合は、「同意する」にチェックを入れ、<br>「入力内容の確認」ボタンを押して確認画面へお進みください。</div>
           <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
           <p id="programmingError" class="error">&nbsp;</p>
-          <input type="checkbox" name="programming" value="同意"> 上記に同意した上で問い合わせます。
+          <input type="checkbox" name="programming" value="同意" {{ old('programming') === '同意' ? 'checked' : '' }}> 上記に同意した上で問い合わせます。
             <br><br>
             <div class="information-btn">
               <button type="submit" style="color:#E9E3DD;">入力した内容を確認する</button>
