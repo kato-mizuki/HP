@@ -47,7 +47,7 @@
    ```bash
    git clone https://github.com/kato-mizuki/HP.git
    cd HP
-2. 依存パッケージをインストール
+2. 依存パッケージをインストール  
     composer install  
     npm install  
     npm run dev  
