@@ -51,22 +51,22 @@
     composer install  
     npm install  
     npm run dev  
-3. .envファイルを作成し、必要な設定を追加  
+3.  .envファイルを作成し、必要な設定を追加  
     cp .env.example .env  
     php artisan key:generate  
 4. サーバー起動  
     php artisan serve  
 
 ## メール送信設定
-.envに以下のように設定してください（例Gmail）  
-    MAIL_MAILER=smtp  
-    MAIL_HOST=smtp.gmail.com  
-    MAIL_PORT=587  
-    MAIL_USERNAME=your_email@gmail.com  
-    MAIL_PASSWORD=your_app_password  
-    MAIL_ENCRYPTION=tls  
-    MAIL_FROM_ADDRESS=your_email@gmail.com  
-    MAIL_FROM_NAME="サイト名"  
+ .envに以下のように設定してください（例Gmail）  
+  MAIL_MAILER=smtp  
+  MAIL_HOST=smtp.gmail.com  
+  MAIL_PORT=587  
+  MAIL_USERNAME=your_email@gmail.com  
+  MAIL_PASSWORD=your_app_password  
+  MAIL_ENCRYPTION=tls  
+  MAIL_FROM_ADDRESS=your_email@gmail.com  
+  MAIL_FROM_NAME="サイト名"  
 その他のメールサービス（Yahoo, Outlook, iCloud など）にも対応可能です。  
 
 ## ライセンス
