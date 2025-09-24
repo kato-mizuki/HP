@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
@@ -50,16 +51,23 @@ class ContactController extends Controller
         }
 
         try {
-            Mail::to('mk1141629@gmail.com') // 管理者宛
+            Mail::to('@gmail.com') // 管理者宛
                 ->send(new ContactMail($formData));
 
             $request->session()->forget('form');
 
             return view('contact.thanks', ['mailSent' => true]);
         } catch (\Exception $e) {
+            // 管理用ログに残す（文字コードをUTF-8に変換）
+            $message = mb_convert_encoding('メール送信失敗: ' . $e->getMessage(), 'UTF-8', 'SJIS-win,UTF-8,ISO-8859-1');
+
+            Log::error($message, [
+                'file' => $e->getFile(),
+                'line' => $e->getLine()
+            ]);
+
             return view('contact.thanks', [
                 'mailSent' => false,
-                'errorMessage' => $e->getMessage()
             ]);
         }
     }

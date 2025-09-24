@@ -20,9 +20,6 @@
             <h1>送信失敗</h1>
             <div class="comment">
                 <p>メールの送信に失敗しました。お手数ですが再度お試しください。</p>
-                @isset($errorMessage)
-                    <p style="color:red;">エラー: {{ $errorMessage }}</p>
-                @endisset
             </div>
         @endif
     </section>

@@ -388,6 +388,17 @@
       text-align: center;                     /* 内部のリンクテキストは中央揃え */
       background-color: var(--main-color);              /* 背景色 */
       color: var(--sub-color);                         /* 文字色 */
+      position: relative;
+    }
+    .plantitle{
+      font-size: 25px;
+      white-space: nowrap;                       /*テキストを１行表示にする*/
+      color: var(--text-color)
+    }
+    .plan{
+      font-size: 15px;
+      color: var(--text-color);
+      text-align: left;
     }
     .Container {
       position: relative;                     /* 要素の現在位置を基準にした相対位置に要素を配置 */ 
@@ -414,26 +425,28 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0) ;   /* 影の設定 */
     }
     .Arrow {
-      display: flex;                       /* 要素を横並びに配置 */
-      position: absolute;
+      display: flex;                            /* 要素を横並びに配置 */
+      position: absolute; 
       top: 50%;
       transform: translateY(-50%);
-      width: 30px;                         /* 幅を固定 */
-      height: 30px;                        /* 高さを固定 */
-      background-color: var(--main-color);           /* 背景色 */
-      color: var(--sub-color);                      /* 文字色 */
-      font-size: 20px;                     /* 文字サイズ */
-      align-items: center;                 /* 縦軸基準で真ん中に配置 */
-      justify-content: center;             /* コンテナ内で中央寄せ */
-      cursor: pointer;                     /* カーソル変化 */
+      width: 40px;                              /* 幅を固定 */
+      height: 40px;                             /* 高さを固定 */ 
+      background-color: var(--sub-color);      /* 背景色 */
+      color: var(--main-color);                  /* 文字色 */
+      font-size: 24px;                          /* 文字の大きさ */
+      align-items: center;                      /* 中央配置 */
+      justify-content: center;                  /* 中央配置 */
+      cursor: pointer;                          /* カーソルを置いたときのマウス設定 */
+      border-radius: 50%;                       /* 丸ボタン風 */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.5);  /* 影の設定 */
     }
 
     .Arrow.left {
-      left: 0;
+      left: 20%;       /* Boxの外に配置 */
     }
 
     .Arrow.right {
-      right: 0;
+      right: 20%;      /* Boxの外に配置 */
     }
 
     .Hide {
@@ -710,8 +723,25 @@
 /* section11：お問い合わせの設定 */
   /* 画像の設定 */
     .section11 {
-     position: center;                           /* 要素の現在位置を基準にした相対位置に要素を配置 */ 
-     text-align: center;                           /* 内部のリンクテキストは中央揃え */
+      position: relative;
+      text-align: center; /* 内部のリンクテキスト中央揃え */
+      background: url('/img/backimage.png') center center / cover no-repeat;
+    }
+
+    .section11::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(233, 227, 221, 0.6); /* 60%透明で文字が読みやすい */
+      z-index: 1;
+    }
+
+    .section11 > * {
+      position: relative;
+      z-index: 2; /* コンテンツを前に出す */
     }
 
     .center09-container {

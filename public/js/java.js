@@ -9,7 +9,8 @@ const images = [
   "img/office2.png",
   "img/house2.jpeg",
   "img/house3.jpeg",
-  "img/office.jpg"
+  "img/office.jpg",
+  "img/room.jpg"
 ];
 
 let index = 0;
@@ -50,56 +51,72 @@ window.addEventListener("resize", () => {
   const el = document.querySelector(".catchcopy");
   fitText(el);
 });
+//Boxの設定
+document.addEventListener("DOMContentLoaded", () => {
+  const boxContainer = document.querySelector(".Box-Container");
+  const boxes = document.querySelectorAll(".Box");
+  const leftArrow = document.querySelector(".Arrow.left");
+  const rightArrow = document.querySelector(".Arrow.right");
 
-// Box を複製してループ感を出す
-const boxes = boxContainer.innerHTML;
-boxContainer.innerHTML += boxes;
+  // 1つのBox幅を取得
+  const scrollAmount = boxes[0].offsetWidth;
+  // Boxを複製してループ感を出す
+  boxContainer.innerHTML += boxContainer.innerHTML;
 
-let currentScrollAmount = 0;
-
-function slide(direction) {
+  let currentScrollAmount = scrollAmount; // 最初は1枚目を表示
   const totalWidth = boxContainer.scrollWidth;
-  const halfWidth = totalWidth / 2; // 複製前の幅
+  const halfWidth = totalWidth / 2; // 元のBox群の幅
 
-  if (direction === 'right') {
-    currentScrollAmount += scrollAmount;
-    if (currentScrollAmount >= halfWidth) {
-      currentScrollAmount = 0; // 半分行ったら最初に戻す
-      boxContainer.style.transition = 'none'; // 瞬間移動
-      boxContainer.style.transform = `translateX(0)`;
-      // 再描画後にアニメーション復活
-      requestAnimationFrame(() => {
+  // 初期位置セット
+  boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
+
+  function moveSlide(direction = "right") {
+    if (direction === "right") {
+      currentScrollAmount += scrollAmount;
+      if (currentScrollAmount >= halfWidth) {
+        // 半分進んだら瞬時に戻す
+        boxContainer.style.transition = "none";
+        currentScrollAmount = 0;
+        boxContainer.style.transform = `translateX(0)`;
         requestAnimationFrame(() => {
-          boxContainer.style.transition = 'transform 0.5s ease';
-          currentScrollAmount = scrollAmount;
-          boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
+          requestAnimationFrame(() => {
+            boxContainer.style.transition = "transform 0.5s ease";
+            currentScrollAmount = scrollAmount;
+            boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
+          });
         });
-      });
-      return;
-    }
-  } else {
-    currentScrollAmount -= scrollAmount;
-    if (currentScrollAmount < 0) {
-      currentScrollAmount = halfWidth - scrollAmount;
-      boxContainer.style.transition = 'none';
-      boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
-      requestAnimationFrame(() => {
+        return;
+      }
+    } else {
+      currentScrollAmount -= scrollAmount;
+      if (currentScrollAmount < 0) {
+        // 左に行きすぎたら末尾へジャンプ
+        boxContainer.style.transition = "none";
+        currentScrollAmount = halfWidth - scrollAmount;
+        boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
         requestAnimationFrame(() => {
-          boxContainer.style.transition = 'transform 0.5s ease';
-          currentScrollAmount -= scrollAmount;
-          boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
+          requestAnimationFrame(() => {
+            boxContainer.style.transition = "transform 0.5s ease";
+            currentScrollAmount -= scrollAmount;
+            boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
+          });
         });
-      });
-      return;
+        return;
+      }
     }
+
+    boxContainer.style.transition = "transform 0.5s ease";
+    boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
   }
 
-  boxContainer.style.transition = 'transform 0.5s ease';
-  boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
-}
+  // 自動スライド
+  setInterval(() => moveSlide("right"), 5000);  //5秒ごとにスライド
 
-rightArrow.addEventListener('click', () => slide('right'));
-leftArrow.addEventListener('click', () => slide('left'));
+  // クリック操作
+  rightArrow.addEventListener("click", () => moveSlide("right"));
+  leftArrow.addEventListener("click", () => moveSlide("left"));
+});
+
 //　バリデート設定
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
