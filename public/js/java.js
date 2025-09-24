@@ -5,12 +5,9 @@ const rightArrow = document.querySelector('.Arrow.right');
 const scrollAmount = 300; // 1クリックごとの移動量（Boxの幅に合わせる）
 
 const images = [
-  "img/house.jpg",
-  "img/office2.png",
-  "img/house2.jpeg",
-  "img/house3.jpeg",
-  "img/office.jpg",
-  "img/room.jpg"
+  "img/back1.jpeg",
+  "img/back2.jpeg",
+  "img/back3.jpeg",
 ];
 
 let index = 0;

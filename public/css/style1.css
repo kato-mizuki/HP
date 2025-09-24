@@ -398,7 +398,7 @@
     .plan{
       font-size: 15px;
       color: var(--text-color);
-      text-align: left;
+      white-space: nowrap;                       /*テキストを１行表示にする*/
     }
     .Container {
       position: relative;                     /* 要素の現在位置を基準にした相対位置に要素を配置 */ 
