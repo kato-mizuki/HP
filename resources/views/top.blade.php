@@ -174,25 +174,54 @@
     <div class="center06-container">
       <div class="Container">
         <div class="Box-Container">
-          <div class="Box"></div>
-          <div class="Box"></div>
-          <div class="Box"></div>
-          <div class="Box"></div>
-          <div class="Box"></div>
-          <div class="Box"></div>
+          <div class="Box">
+            <p class="plantitle">基本管理プラン</p>
+            <p class="plan">
+              小規模物件オーナー向けで、賃貸物件の入居者管理、家賃回収代行、定期的な物件巡回・点検報告を行う、最低限の管理業務に絞ったリーズナブルなプランです。
+            </p> 
+          </div>
+          <div class="Box">
+            <p class="plantitle">資産活用プラン</p>
+            <p class="plan">
+              遊休資産を活かしたいオーナー向けで、空室対策やリノベーション提案、短期賃貸（民泊など）の運用サポート、投資効果シミュレーションを行い、収益最大化を目指す運用コンサル付きのプランです。
+            </p> 
+          </div>
+          <div class="Box">
+            <p class="plantitle">売却支援プラン</p>
+            <p class="plan">
+              物件の売却を検討中のオーナー向けで、物件査定や市場価格分析、販売戦略の立案、仲介・契約手続きサポートを行い、スムーズな売却を全面的に支援するプランです。
+            </p> 
+          </div>
+          <div class="Box">
+            <p class="plantitle">フルサポートプラン</p>
+            <p class="plan">
+              資産規模が大きいオーナー向けで、管理・活用・売却すべてを包括的にサポートし、定期レポートや資産価値分析、税務・法務相談にも対応する、手間をかけずに資産運用と売却まで任せられるプランです。
+            </p> 
+          </div>
+          <div class="Box">
+            <p class="plantitle">リノベ特化プラン</p>
+            <p class="plan">
+              収益向上を目的とした物件オーナー向けで、リノベーション提案や施工管理、デザインコンサル、改修後の賃貸募集・運用サポートを行い、物件価値を大幅にアップさせるプランです。
+            </p> 
+          </div>
+          <div class="Box">
+            <p class="plantitle">投資家向けプラン</p>
+            <p class="plan">
+              複数物件を所有する投資家向けで、ポートフォリオ分析や売却タイミング提案、賃貸経営戦略や収益シミュレーション、節税・ローン返済シミュレーションを行い、投資判断を数字で支えるプランです。
+          </div>
           <!-- 必要な数の.Box要素を追加 -->
         </div>
+      </div>
       <div class="Arrow left"><</div>
       <div class="Arrow right">></div>
+      <br>
+      <br>
+      <div class="pln-btn">
+        <a href="#" 
+          class="jump-link" 
+          data-target="jump5">お問い合わせ ✉</a>
+      </div>
     </div>
-    <br>
-    <br>
-    <div class="pln-btn">
-      <a href="#" 
-        class="jump-link" 
-        data-target="jump5">お問い合わせ ✉</a>
-    </div>
-  </div>
     <br>
     <hr>
     <br>
@@ -205,7 +234,7 @@
     <hr>
     <br>
     <div class="center07-container">
-      <img src="{{ asset ('img/2025-08-12 104439.png') }}" alt="ご利用までの流れ" class="step">
+      <img src="{{ asset ('img/service_nagare.png') }}" alt="ご利用までの流れ" class="step">
     </div>
     <ul class="step-box">
       <li class="step-item">お問い合わせ<br><br>本ページから、ご相談内容、お客様情報をご入力の上、お問い合わせください。</li>
@@ -308,7 +337,7 @@
   </section>
   <hr>
 
-  <a id="jump5">ここはjump5というidがついた場所です</a>
+  <a id="jump5"><!-- ここはjump5というidがついた場所です --></a>
 
   <!-- お問い合わせ -->
   <section class="section11">
@@ -353,17 +382,17 @@
           <div class="text">
             <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
             <p id="nameError" class="error">&nbsp;</p> 
-            <label for="name">| お名前 |<span style="color:red;">*必須</span></label><br>
+            <label for="name">| お名前 |<span style="color:red;">*</span></label><br>
             <input type="text" name="name" value="{{ old('name') }}" placeholder="例：山田太郎">
             
             <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
             <p id="furiganaError" class="error">&nbsp;</p>
-            <label for="furigana">| フリガナ |<span style="color:red;">*必須</span></label><br>
+            <label for="furigana">| フリガナ |<span style="color:red;">*</span></label><br>
             <input type="text" name="furigana" value="{{ old('furigana') }}" placeholder="例：ヤマダタロウ">
 
             <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
             <p id="emailError" class="error">&nbsp;</p>
-            <label for="email">| メールアドレス |<span style="color:red;">*必須</span></label><br>
+            <label for="email">| メールアドレス |<span style="color:red;">*</span></label><br>
             <input type="text" name="email" value="{{ old('email') }}" placeholder="例：xxxx@xx.xx"><br><br>
 
             <label for="tel">| 電話番号 |</label><br>
@@ -372,7 +401,7 @@
             <h4>お客様の物件情報</h4>
             <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
             <p id="postcodeError" class="error">&nbsp;</p>
-            <label for="postcode">| 郵便番号 |<span style="color:red;">*必須</span></label><br>
+            <label for="postcode">| 郵便番号 |<span style="color:red;">*</span></label><br>
             <input type="text" id="postcode" name="postcode" placeholder="入力してください。例123-456" value="{{ old('postcode') }}" >
             <div class="add">※郵便番号を入力すると住所の一部が自動で入力されます。</div>
             <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
@@ -407,20 +436,73 @@
               <p class="privacy-policy__item__desc">「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，連絡先その他の記述等により特定の個人を識別できる情報及び容貌，指紋，声紋にかかるデータ，及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。</p>
             </div>
             <div class="privacy-policy__item">
-              <p class="privacy-policy__item__title">第1条（個人情報）</p>
-            <p class="privacy-policy__item__desc">「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，連絡先その他の記述等により特定の個人を識別できる情報及び容貌，指紋，声紋にかかるデータ，及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。</p>
+              <p class="privacy-policy__item__title">第2条（個人情報の収集方法）</p>
+              <p class="privacy-policy__item__desc">
+                当社は、以下の方法により個人情報を収集することがあります。<br>
+                　1. お問い合わせフォーム、メール、電話による情報提供<br>
+                　2. サービス利用時の登録情報<br>
+                　3. その他、適法かつ公正な手段による収集
+              </p>
             </div>
             <div class="privacy-policy__item">
-              <p class="privacy-policy__item__title">第1条（個人情報）</p>
-              <p class="privacy-policy__item__desc">「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，連絡先その他の記述等により特定の個人を識別できる情報及び容貌，指紋，声紋にかかるデータ，及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。</p>
+              <p class="privacy-policy__item__title">第3条（個人情報の利用目的）</p>
+              <p class="privacy-policy__item__desc">
+                収集した個人情報は、以下の目的のみに利用します。<br>
+                　1. お問い合わせ・ご相談への対応<br>
+                　2. サービスの提供および改善<br>
+                　3. 必要に応じたご連絡・通知<br>
+                　4. 法令に基づく手続き・請求対応
+              </p>
             </div>
             <div class="privacy-policy__item">
-              <p class="privacy-policy__item__title">第1条（個人情報）</p>
-              <p class="privacy-policy__item__desc">「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，連絡先その他の記述等により特定の個人を識別できる情報及び容貌，指紋，声紋にかかるデータ，及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。</p>
+              <p class="privacy-policy__item__title">第4条（個人情報の第三者提供）</p>
+              <p class="privacy-policy__item__desc">
+                　1. 当社は、法令に基づく場合を除き、個人情報を第三者に提供いたしません。<br>
+                　2. 提供が必要な場合は、事前にご本人の同意を取得します。
+              </p>
             </div>
             <div class="privacy-policy__item">
-              <p class="privacy-policy__item__title">第1条（個人情報）</p>
-              <p class="privacy-policy__item__desc">「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，連絡先その他の記述等により特定の個人を識別できる情報及び容貌，指紋，声紋にかかるデータ，及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。</p>
+              <p class="privacy-policy__item__title">第5条（個人情報の管理）</p>
+              <p class="privacy-policy__item__desc">
+                　1. 個人情報の漏洩、滅失、毀損、改ざんを防止するため、適切な安全管理措置を講じます。<br>
+                　2. 社内規程に従い、従業員に対する教育・監督を実施します。
+              </p>
+            </div>
+            <div class="privacy-policy__item">
+              <p class="privacy-policy__item__title">第6条（個人情報の開示・訂正・削除）</p>
+              <p class="privacy-policy__item__desc">
+                　1. ご本人からの開示、訂正、削除、利用停止の請求に対して、法令に従い速やかに対応します。<br>
+                　2. 請求の際には、本人確認を適切に行う場合があります。
+              </p>
+            </div>
+            <div class="privacy-policy__item">
+              <p class="privacy-policy__item__title">第7条（Cookie等の利用）</p>
+              <p class="privacy-policy__item__desc">
+                当社ウェブサイトでは、アクセス解析やサービス向上のため、Cookie等の技術を使用する場合があります。
+                これにより取得する情報は個人を特定できる情報ではなく、サービス改善のために利用します。
+              </p>
+            </div>
+            <div class="privacy-policy__item">
+              <p class="privacy-policy__item__title">第8条（法令・規範の遵守）</p>
+              <p class="privacy-policy__item__desc">当社は、個人情報の保護に関する法令、ガイドライン、その他の規範を遵守します。</p>
+            </div>
+            <div class="privacy-policy__item">
+              <p class="privacy-policy__item__title">第9条（規程の改定）</p>
+              <p class="privacy-policy__item__desc">
+                本規程の内容は、法令の改正や運用上の必要に応じて改定されることがあります。
+                改定後は、当社ウェブサイトに掲示し、効力を生じます。
+              </p>
+            </div>
+            <div class="privacy-policy__item">
+              <p class="privacy-policy__item__title">第10条（お問い合わせ窓口）</p>
+              <p class="privacy-policy__item__desc">
+                個人情報に関するお問い合わせ、開示、訂正、削除、利用停止等のご請求は、以下の窓口までご連絡ください。<br>
+                　・ 連絡先：〇〇株式会社 個人情報管理担当<br>
+                　・ 電話番号：000-0000-0000<br>
+                　・ メールアドレス：privacy@example.com<br>
+                　・ 受付時間：平日 9:00～18:00<br>
+                当社は、法令に基づき、速やかかつ適切に対応いたします。
+              </p>
             </div>
           </div>
           <div class="agree">【個人情報の取り扱いについて】にご同意いただける場合は、「同意する」にチェックを入れ、<br>「入力内容の確認」ボタンを押して確認画面へお進みください。</div>
