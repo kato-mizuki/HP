@@ -48,71 +48,71 @@ window.addEventListener("resize", () => {
   const el = document.querySelector(".catchcopy");
   fitText(el);
 });
-//Boxの設定
-document.addEventListener("DOMContentLoaded", () => {
-  const boxContainer = document.querySelector(".Box-Container");
-  const boxes = document.querySelectorAll(".Box");
-  const leftArrow = document.querySelector(".Arrow.left");
-  const rightArrow = document.querySelector(".Arrow.right");
+// //Boxの設定
+// document.addEventListener("DOMContentLoaded", () => {
+//   const boxContainer = document.querySelector(".Box-Container");
+//   const boxes = document.querySelectorAll(".Box");
+//   const leftArrow = document.querySelector(".Arrow.left");
+//   const rightArrow = document.querySelector(".Arrow.right");
 
-  // 1つのBox幅を取得
-  const scrollAmount = boxes[0].offsetWidth;
-  // Boxを複製してループ感を出す
-  boxContainer.innerHTML += boxContainer.innerHTML;
+//   // 1つのBox幅を取得
+//   const scrollAmount = boxes[0].offsetWidth;
+//   // Boxを複製してループ感を出す
+//   boxContainer.innerHTML += boxContainer.innerHTML;
 
-  let currentScrollAmount = scrollAmount; // 最初は1枚目を表示
-  const totalWidth = boxContainer.scrollWidth;
-  const halfWidth = totalWidth / 2; // 元のBox群の幅
+//   let currentScrollAmount = scrollAmount; // 最初は1枚目を表示
+//   const totalWidth = boxContainer.scrollWidth;
+//   const halfWidth = totalWidth / 2; // 元のBox群の幅
 
-  // 初期位置セット
-  boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
+//   // 初期位置セット
+//   boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
 
-  function moveSlide(direction = "right") {
-    if (direction === "right") {
-      currentScrollAmount += scrollAmount;
-      if (currentScrollAmount >= halfWidth) {
-        // 半分進んだら瞬時に戻す
-        boxContainer.style.transition = "none";
-        currentScrollAmount = 0;
-        boxContainer.style.transform = `translateX(0)`;
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            boxContainer.style.transition = "transform 0.5s ease";
-            currentScrollAmount = scrollAmount;
-            boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
-          });
-        });
-        return;
-      }
-    } else {
-      currentScrollAmount -= scrollAmount;
-      if (currentScrollAmount < 0) {
-        // 左に行きすぎたら末尾へジャンプ
-        boxContainer.style.transition = "none";
-        currentScrollAmount = halfWidth - scrollAmount;
-        boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            boxContainer.style.transition = "transform 0.5s ease";
-            currentScrollAmount -= scrollAmount;
-            boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
-          });
-        });
-        return;
-      }
-    }
+//   function moveSlide(direction = "right") {
+//     if (direction === "right") {
+//       currentScrollAmount += scrollAmount;
+//       if (currentScrollAmount >= halfWidth) {
+//         // 半分進んだら瞬時に戻す
+//         boxContainer.style.transition = "none";
+//         currentScrollAmount = 0;
+//         boxContainer.style.transform = `translateX(0)`;
+//         requestAnimationFrame(() => {
+//           requestAnimationFrame(() => {
+//             boxContainer.style.transition = "transform 0.5s ease";
+//             currentScrollAmount = scrollAmount;
+//             boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
+//           });
+//         });
+//         return;
+//       }
+//     } else {
+//       currentScrollAmount -= scrollAmount;
+//       if (currentScrollAmount < 0) {
+//         // 左に行きすぎたら末尾へジャンプ
+//         boxContainer.style.transition = "none";
+//         currentScrollAmount = halfWidth - scrollAmount;
+//         boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
+//         requestAnimationFrame(() => {
+//           requestAnimationFrame(() => {
+//             boxContainer.style.transition = "transform 0.5s ease";
+//             currentScrollAmount -= scrollAmount;
+//             boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
+//           });
+//         });
+//         return;
+//       }
+//     }
 
-    boxContainer.style.transition = "transform 0.5s ease";
-    boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
-  }
+//     boxContainer.style.transition = "transform 0.5s ease";
+//     boxContainer.style.transform = `translateX(-${currentScrollAmount}px)`;
+//   }
 
-  // 自動スライド
-  setInterval(() => moveSlide("right"), 5000);  //5秒ごとにスライド
+//   // 自動スライド
+//   setInterval(() => moveSlide("right"), 5000);  //5秒ごとにスライド
 
-  // クリック操作
-  rightArrow.addEventListener("click", () => moveSlide("right"));
-  leftArrow.addEventListener("click", () => moveSlide("left"));
-});
+//   // クリック操作
+//   rightArrow.addEventListener("click", () => moveSlide("right"));
+//   leftArrow.addEventListener("click", () => moveSlide("left"));
+// });
 
 //　バリデート設定
 document.addEventListener("DOMContentLoaded", () => {

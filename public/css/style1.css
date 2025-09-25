@@ -166,7 +166,7 @@
       display: flex;
       align-items: flex-start;    /* 上揃えにして文章の高さがズレないように */
       gap: 2rem;                  /* 画像と文章の間隔 */
-      margin-top: 10%;
+      margin-top: 30%;
       padding-top: 10%;
     }
 
@@ -184,7 +184,7 @@
     }
 
     .degree {
-      width: 220px;   /* 称号の大きさ調整 */
+      width: 50%;   /* 称号の大きさ調整 */
       height: auto;
     }
 
@@ -390,6 +390,43 @@
       color: var(--sub-color);                         /* 文字色 */
       position: relative;
     }
+/* 画像の設定 */
+    .image-box {
+      flex: 0 0 auto;   /* 画像サイズで固定 */
+      border: none;     /* ボックスの枠は消す */
+      padding: 0;
+    }
+
+    .image-box img {
+      max-width: 150px;
+      height: auto;
+      display: block;
+    }
+/* ボックス・ボックス内の設定 */
+    .Container {
+      position: relative;                     /* 要素の現在位置を基準にした相対位置に要素を配置 */ 
+      width: 50%;                             /* 幅を固定 */
+      margin: auto;                           /* 要素の外側の余白を設定 */
+    }
+    .Box-Container {
+      margin: auto;                           /* 要素の外側の余白を設定 */
+      display: flex;                          /* 要素を横並びに配置 */
+      width: 80%;                             /* 幅を固定 */
+      height: 80%;                            /* 高さを固定 */
+      width: fit-content;
+      transition: transform 0.3s ease;
+      transform: translateX(-15%);          /* ← 左にずらす */
+    }
+    .Box {
+      flex-shrink: 0;
+      width: 270px;                        /* 幅を固定 */
+      height: 400px;                       /* 高さを固定 */
+      margin: 10px;
+      border-radius: 20px;                 /* 角の丸み */
+      background-color: var(--sub-color);           /* 背景色 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0) ;   /* 影の設定 */
+      margin-top: 90px;
+    }
     .plantitle{
       font-size: 25px;
       white-space: nowrap;                       /*テキストを１行表示にする*/
@@ -399,59 +436,23 @@
       font-size: 15px;
       color: var(--text-color);
       white-space: nowrap;                       /*テキストを１行表示にする*/
+      text-align: left;
+      margin-left: 20px;
+      margin-right: 10px;
     }
-    .Container {
-      position: relative;                     /* 要素の現在位置を基準にした相対位置に要素を配置 */ 
-      width: 50%;                             /* 幅を固定 */
-      overflow: hidden;                       /* 要素のボックスからはみ出した部分を隠す */
-      margin: auto;                           /* 要素の外側の余白を設定 */
+    .section06 strong{
+      text-align: center;
+      font-size: 15px;
+      color: var(--text-color);
+      white-space: nowrap;                       /*テキストを１行表示にする*/
     }
-    .Box-Container {
-      margin: auto;                           /* 要素の外側の余白を設定 */
-      display: flex;                          /* 要素を横並びに配置 */
-      width: 80%;                             /* 幅を固定 */
-      height: 80%;                             /* 高さを固定 */
-      width: fit-content;
-      transition: transform 0.3s ease;
-      transform: translateX(0) ;
+    .otoku{
+      text-align: center;
+      font-size: 15px;
+      color: var(--text-color);
+      white-space: nowrap;                       /*テキストを１行表示にする*/
     }
-    .Box {
-      flex-shrink: 0;
-      width: 243px;                        /* 幅を固定 */
-      height: 300px;                       /* 高さを固定 */
-      margin: 10px;
-      border-radius: 20px;                 /* 角の丸み */
-      background-color: var(--sub-color);           /* 背景色 */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0) ;   /* 影の設定 */
-    }
-    .Arrow {
-      display: flex;                            /* 要素を横並びに配置 */
-      position: absolute; 
-      top: 50%;
-      transform: translateY(-50%);
-      width: 40px;                              /* 幅を固定 */
-      height: 40px;                             /* 高さを固定 */ 
-      background-color: var(--sub-color);      /* 背景色 */
-      color: var(--main-color);                  /* 文字色 */
-      font-size: 24px;                          /* 文字の大きさ */
-      align-items: center;                      /* 中央配置 */
-      justify-content: center;                  /* 中央配置 */
-      cursor: pointer;                          /* カーソルを置いたときのマウス設定 */
-      border-radius: 50%;                       /* 丸ボタン風 */
-      box-shadow: 0 4px 6px rgba(0,0,0,0.5);  /* 影の設定 */
-    }
-
-    .Arrow.left {
-      left: 20%;       /* Boxの外に配置 */
-    }
-
-    .Arrow.right {
-      right: 20%;      /* Boxの外に配置 */
-    }
-
-    .Hide {
-      display: none;
-    }
+/* ボタンの設定 */
     .pln-btn {
       display: block;                         /* ブロックレベル要素として表示 */
       justify-content: center;                /* コンテナ内で中央寄せ */

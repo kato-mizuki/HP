@@ -85,13 +85,13 @@
       display: block;                              /* ブロックレベル要素として表示 */
       text-align: center;                          /* 内部のリンクテキストは中央揃え */
       width: 100%;                                 /* 幅を固定 */
-      height: 100px;                                /* 高さを固定 */
+      height: auto;                                /* 高さを固定 */
       background-color: var(--main-color);         /* 背景色 */
       }
     .header.nav {
         display: flex;                             /* 要素を横並びに */                      
         width: 100%;                               /* 幅を固定 */
-        height: 100px;                             /* 高さを固定 */
+        height: auto;                             /* 高さを固定 */
         margin: 0 auto;                            /* ブロックレベル要素を中央揃え */
         font-size: 15px;                           /* 文字サイズ */                          
         box-sizing: border-box;                    /* paddingやborderを含んで幅と高さを計算 */ 
@@ -100,23 +100,23 @@
     }
 /* 企業ロゴの設定 */
     .logo {
-      width: 200px;
-      height: 80px;
-      padding: 10px 10px; /* 上下・左右の空白を設定 */
+      width: 200px;         /* 基本サイズを固定 */
+      max-width: 15%;       /* 画面がすごく狭い時だけ縮小 */
+      height: auto;
     }
     .logo img {
-      width: 100%;           /* 横幅を親要素に合わせる */
-      height: 100%;          /* 縦幅を親要素に合わせる */
-      object-fit: contain;   /* 画像を縦横比を維持して収める */
+      width: 100%;
+      height: auto;  /* ←アスペクト比を維持 */
     }
+
 
 /* テキストの設定 */
     ul.nav {
       display: flex;                              /* 要素を横並びに配置 */
       align-items: center;                        /* 縦軸基準で真ん中に配置 */
       justify-content: flex-end;                  /* コンテナ内で終端寄せ */
-      width: 100%;                               /* 幅を固定 */
-      height: 100%;                              /* 高さを固定 */
+      width: 75%;                               /* 幅を固定 */
+      height: auto;                              /* 高さを固定 */
       margin-right: 10px;
     }
     li {
@@ -130,7 +130,7 @@
       align-items: center;
       text-align: center;
       /* li が小さくならないようにする */
-      min-width: 150px;        /* ←ボタン幅を指定 */
+      min-width: 5%;        /* ←ボタン幅を指定 */
       height: 50px;            /* 高さも固定するとクリック範囲が安定 */
       margin: 5px;
       border: solid 2px var(--sub-color);
@@ -142,7 +142,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;   /* liいっぱいに広げる */
+      width: 70%;   /* liいっぱいに広げる */
       height: 100%;  /* liいっぱいに広げる */
       text-decoration: none;
       color: var(--sub-color);

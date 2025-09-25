@@ -170,14 +170,16 @@
     <br>
     <br>
     <h1>プラン内容</h1>
-    <br>
     <div class="center06-container">
       <div class="Container">
         <div class="Box-Container">
+          <div class="image-box">
+            <img class="off" src="{{ asset('img/Edit the previously .png') }}" alt="年契約">
+          </div>
           <div class="Box">
             <p class="plantitle">喜守フリー</p>
+            <strong>月額0円</strong><br>
             <p class="plan">
-              <strong>月額0円</strong><br>
               年4回（1月・4月・7月・10月）<br>
               ・巡回、報告書（写真付き）<br>
               ・管理中看板設置<br>
@@ -187,22 +189,41 @@
             </p> 
           </div>
           <div class="Box">
-            <p class="plantitle">資産活用プラン</p>
+            <p class="plantitle">喜守スタンダード</p>
+            <strong>月額5,500円→年契約の場合4,950円</strong><br>
+            <p class="otoku">
+              （年間6,600円もお得）<br>
+              毎月1回<br>
+            </p>
             <p class="plan">
-              遊休資産を活かしたいオーナー向けで、空室対策やリノベーション提案、短期賃貸（民泊など）の運用サポート、投資効果シミュレーションを行い、収益最大化を目指す運用コンサル付きのプランです。
+              ・巡回、報告書（写真、動画付き）<br>
+              ・管理中看板設置<br>
+              ・お問い合わせ対応代行<br>
+              ・ポスト整理<br>
+              ・草刈り・庭木剪定
             </p> 
           </div>
           <div class="Box">
-            <p class="plantitle">売却支援プラン</p>
+            <p class="plantitle">喜守プレミアム</p>
+            <strong>月額11,000円→年契約の場合9,900円</strong><br>
+            <p class ="otoku">
+              （年間13,200円もお得）<br>
+              毎月1回<br>
+            </p>
             <p class="plan">
-              物件の売却を検討中のオーナー向けで、物件査定や市場価格分析、販売戦略の立案、仲介・契約手続きサポートを行い、スムーズな売却を全面的に支援するプランです。
+              ・巡回、報告書（写真、動画付き）<br>
+              ・管理中看板設置<br>
+              ・お問い合わせ対応代行<br>
+              ・ポスト整理<br>
+              ・草刈り・庭木剪定<br>
+              ・通風・通水<br>
+              ・室内清掃<br>
+              ・各所点検
             </p> 
           </div>
           <!-- 必要な数の.Box要素を追加 -->
         </div>
       </div>
-      <div class="Arrow left"><</div>
-      <div class="Arrow right">></div>
       <br>
       <br>
       <div class="pln-btn">
