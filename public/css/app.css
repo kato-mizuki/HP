@@ -151,7 +151,8 @@
     .nav li:hover {
       background-color: var(--hover-color);                   /* 背景色 */
     }
-    /* section12：footerの設定 */
+
+/* section12：footerの設定 */
     .section12{
       text-align: center;                          /* 内部のリンクテキストは中央揃え */
     }
@@ -160,7 +161,7 @@
       position: relative;                          /* 要素の現在位置を基準にした相対位置に要素を配置 */ 
       text-align: center;                          /* 内部のリンクテキストは中央揃え */
       width: 100% ;                                /* 幅を固定 */
-      height: 200px;                               /* 高さを固定 */
+      height: auto;                               /* 高さを固定 */
       background-color: var(--main-color);                   /* 背景色 */
       color: var(--sub-color);                               /* 文字色 */
       padding: 30px 20px;                          /* 上下に30px、左右に20pxのスペースを設ける */
@@ -176,17 +177,20 @@
       flex-wrap: nowrap;                           /* アイテムの折り返し */
       width: 90%;                                 /* 幅を固定 */
       height: 90%;                                 /* 高さを固定 */
+      min-width: 20%;
     }
     .information-item {
-      width: 100px;                                /* 幅を固定 */
-      height: 100px;                               /* 高さを固定 */
-      margin: 30px;                                /* 要素の外側の余白を設定 */
+      width: 40%;                                /* 幅を固定 */
+      height: auto;                               /* 高さを固定 */
+      flex: 1;               /* 残りスペースを均等に分ける */
+      margin: 0 10px;        /* 要素間の余白 */
+      white-space: nowrap;                       /*テキストを１行表示にする*/
     }
     .logo2 {
-      width:50% ;                                  /* 幅を固定 */
-      height: 100% ;                               /* 高さを固定 */
+      width: 20%;                                  /* 幅を固定 */
+      height: auto;                               /* 高さを固定 */
       margin-right: auto;                           /* 要素の外側の余白を設定 */
-      margin-left: 50px;                            /* 要素の外側の余白を設定 */
+      margin-left: 5%;                            /* 要素の外側の余白を設定 */
     }
     .center10-container2 {
       color: var(--sub-color);                               /* 文字色 */
