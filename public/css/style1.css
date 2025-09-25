@@ -405,7 +405,7 @@
 /* ボックス・ボックス内の設定 */
     .Container {
       position: relative;                     /* 要素の現在位置を基準にした相対位置に要素を配置 */ 
-      width: 50%;                             /* 幅を固定 */
+      width: 100%;                             /* 幅を固定 */
       margin: auto;                           /* 要素の外側の余白を設定 */
     }
     .Box-Container {
@@ -415,7 +415,7 @@
       height: 80%;                            /* 高さを固定 */
       width: fit-content;
       transition: transform 0.3s ease;
-      transform: translateX(-15%);          /* ← 左にずらす */
+      transform: translateX(-5%);          /* ← 左にずらす */
     }
     .Box {
       flex-shrink: 0;
