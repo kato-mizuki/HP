@@ -88,7 +88,7 @@
       /* ボタンを光らせるために必要 */
       overflow:hidden;                             /* ボタンの外の領域は非表示 */
       z-index: 10;                                 /* 最前面にする設定 */
-      width: 300px;                                /* 幅を固定 */
+      width: 20%;                                /* 幅を固定 */
       /* height: 20px;                                高さを固定 */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0) ;   /* 影の設定 */
     }
@@ -102,7 +102,7 @@
       display: flex;              /* クリック範囲を全体に広げる */
       justify-content: center;    /* 横中央 */
       align-items: center;        /* 縦中央 */
-      padding: 15px 0;            /* ここで高さを調整 */
+      padding: 10px 0;            /* ここで高さを調整 */
       font-size: 15px;
       color: var(--sub-color);
       text-decoration: none;
