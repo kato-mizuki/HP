@@ -323,6 +323,7 @@
     }
     .section04 h1{
       color :var(--main-color);
+      white-space: nowrap;                       /*テキストを１行表示にする*/
     }
     .section04 h2 {
       font-size: 1.8rem;
@@ -399,6 +400,7 @@
 
     .image-box img {
       max-width: 150px;
+      width: 100%;
       height: auto;
       display: block;
     }
@@ -412,7 +414,7 @@
       margin: auto;                           /* 要素の外側の余白を設定 */
       display: flex;                          /* 要素を横並びに配置 */
       width: 80%;                             /* 幅を固定 */
-      height: 80%;                            /* 高さを固定 */
+      height: 90%;                            /* 高さを固定 */
       width: fit-content;
       transition: transform 0.3s ease;
       transform: translateX(-5%);          /* ← 左にずらす */
@@ -420,7 +422,7 @@
     .Box {
       flex-shrink: 0;
       width: 270px;                        /* 幅を固定 */
-      height: 400px;                       /* 高さを固定 */
+      height: 420px;                       /* 高さを固定 */
       margin: 10px;
       border-radius: 20px;                 /* 角の丸み */
       background-color: var(--sub-color);           /* 背景色 */
