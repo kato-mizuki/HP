@@ -121,6 +121,41 @@
       text-decoration: none;
     }
 
+    @media screen and (max-width: 600px) {
+      .fixed-btn {
+        display: block;                              /* block要素作成 */
+        text-align: center;                          /* 内部のリンクテキストは中央揃え */
+        position: fixed;                             /* 要素を画面の特定の位置に固定 */
+        background-color: var(--main-color);                   /* 背景色 */
+        border: solid 2px var(--sub-color);                   /* 枠の設定 */
+        padding: 0px;                           /* 要素内部の余白 */
+        font-size: 15px;                             /* 文字サイズ */
+        bottom: 30px;                                /* 画面下からの距離 */
+        right: 20px;                                 /* 画面右からの距離 */
+        border-radius: 20px;                         /* 角の丸み */
+        cursor: pointer;                             /* リンクがあれば不要 */
+        /* ボタンを光らせるために必要 */
+        overflow:hidden;                             /* ボタンの外の領域は非表示 */
+        z-index: 10;                                 /* 最前面にする設定 */
+        width: 55%;                                /* 幅を固定 */
+        /* height: 20px;                                高さを固定 */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0) ;   /* 影の設定 */
+      }
+      /* カーソルを置いた時の背景色 */
+      .fixed-btn:hover {
+        background-color: var(--hover-color);                     /* 背景色 */
+      }
+      /* ボタン内のリンクのスタイル 
+      （リンク自体でボタンを作る場合には不要） */
+      .fixed-btn a {
+        display: flex;              /* クリック範囲を全体に広げる */
+        justify-content: center;    /* 横中央 */
+        align-items: center;        /* 縦中央 */
+        font-size: 15px;
+        color: var(--sub-color);
+        text-decoration: none;
+      }
+    }
 /* section01：ファーストビューの設定 */
     .section01 {
       position: relative;
@@ -216,6 +251,60 @@
       max-width: 300px;
       font-size: 1rem;
       line-height: 1.6;
+    }
+/*スマホ表示用の設定*/
+    @media screen and (max-width: 600px) {
+      .section01 {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column; /* 縦に積む */
+        justify-content: center;    /* キャッチコピーを中央に */
+        align-items: center;
+        padding: 2rem;
+        box-sizing: border-box;
+      }
+
+      #slideshow {
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 1s ease-in-out; /* フェード効果 */
+      }
+
+      .section01::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.5);
+        z-index: 0;
+      }
+
+      .section01 * {
+        position: relative;
+        z-index: 1;
+      }
+      .catchcopy {
+        margin: 0;
+        text-align: center;
+        text-shadow: 2px 2px 0 var(--sub-color),
+          -2px 2px 0 var(--sub-color),
+          2px -2px 0 var(--sub-color),
+          -2px -2px 0 var(--sub-color);               /* 枠線 */
+        margin-bottom: 2rem;  /* キャッチコピーとボトムエリアの間隔 */
+        position: relative;   /* ← absoluteをやめる */
+        top: auto;
+        left: auto;
+        transform: none;      /* ← translateも消す */
+      }
+
+      h1 strong {
+        font-size: 15px;     /* スマホでは小さめだけど見やすく */
+        line-height: 0.4;    /* 行間を広げる */
+        padding: 0 10px;     /* 端にくっつかないよう余白 */
+        white-space: normal;  /* 自然に複数行OK */
+        text-align: center;
+      }
     }
 
 /* section02：問題提起の設定 */
