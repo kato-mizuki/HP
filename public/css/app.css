@@ -108,6 +108,7 @@
       width: 30px;
       height: 20px;
       cursor: pointer;
+      margin: 10%;
     }
 
     .hamburger span {
@@ -185,29 +186,65 @@
       display: flex;
     }
 
-/* スマホ表示 */
+/* スマホ用 */
     @media screen and (max-width: 600px) {
-      ul.nav {
-        display: none;        /* 初期は非表示 */
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      /* 企業ロゴの設定 */
+      .logo {
+        width: 80%;         /* 基本サイズを固定 */
+        max-width: 20%;       /* 画面がすごく狭い時だけ縮小 */
+        height: auto;
+      }
+      .logo img {
+        width: 100%;
+        height: auto;  /* ←アスペクト比を維持 */
+      }
+
+      .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--sub-color);
+        border-radius: 2px;
+      }
+
+      #nav-menu {
+        display: none; /* 初期は非表示 */
         flex-direction: column;
         position: absolute;
-        top: 60px;            /* ロゴ下あたりに表示 */
+        top: 60px;
         right: 10px;
         background-color: var(--main-color);
-        width: 200px;
-        padding: 10px 0;
+        width: 250px;
+        padding: 10px 0 0 0;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        z-index: 9999; /* ←これを追加 */
       }
 
-      ul.nav li {
-        justify-content: flex-start;
-        margin: 5px 0;
-        width: 100%;
+      #nav-menu.show {
+        display: flex !important; /* ハンバーガークリックで表示 */
+      }
+      #nav-menu li {
+        width: 90%;             /* 横幅を統一 */
+        text-align: center;      /* 文字を中央寄せ */
       }
 
-      .hamburger {
-        display: flex;        /* スマホで表示 */
+      #nav-menu li a {
+        display: block;          /* aタグ全体をボタン化 */
+        padding: 20px 0 0 0;         /* 上下の余白を揃える */
+        font-size: 16px;         /* 文字サイズを統一 */
+        color: var(--sub-color); /* 色も好みに合わせて */
+        text-decoration: none;
+        text-align: center;
       }
     }
 
