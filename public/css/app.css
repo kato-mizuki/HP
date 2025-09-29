@@ -21,13 +21,26 @@
     }
 
 /* 画面幅が600px以下の場合のスタイル */
-    @media screen and (min-width: 600px) {
+    @media screen and (max-width: 600px) {
       .wrapper {
         display: flex;
         gap: 2%; /* カラム間の余白 */
       }
       #aside {
         flex: 1; /* 自動で分配 */
+      }
+      #main {
+        flex: 1;
+      }
+    }
+/* 画面幅が601px以上の場合のスタイル（タブレット以上） */
+    @media screen and (min-width: 601px) {
+      .wrapper {
+        display: flex;
+        gap: 2%;
+      }
+      #aside {
+        flex: 1;
       }
       #main {
         flex: 1;
