@@ -392,17 +392,17 @@
           <div class="text">
             <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
             <p id="nameError" class="error">&nbsp;</p> 
-            <label for="name">| お名前 |<span style="color:red;">*</span></label><br>
+            <label for="name">| お名前 |<span style="color:red;">*必須</span></label><br>
             <input type="text" name="name" value="{{ old('name') }}" placeholder="例：山田太郎">
             
             <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
             <p id="furiganaError" class="error">&nbsp;</p>
-            <label for="furigana">| フリガナ |<span style="color:red;">*</span></label><br>
+            <label for="furigana">| フリガナ |<span style="color:red;">*必須</span></label><br>
             <input type="text" name="furigana" value="{{ old('furigana') }}" placeholder="例：ヤマダタロウ">
 
             <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
             <p id="emailError" class="error">&nbsp;</p>
-            <label for="email">| メールアドレス |<span style="color:red;">*</span></label><br>
+            <label for="email">| メールアドレス |<span style="color:red;">*必須</span></label><br>
             <input type="text" name="email" value="{{ old('email') }}" placeholder="例：xxxx@xx.xx"><br><br>
 
             <label for="tel">| 電話番号 |</label><br>
@@ -411,7 +411,7 @@
             <h4>お客様の物件情報</h4>
             <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
             <p id="postcodeError" class="error">&nbsp;</p>
-            <label for="postcode">| 郵便番号 |<span style="color:red;">*</span></label><br>
+            <label for="postcode">| 郵便番号 |<span style="color:red;">*必須</span></label><br>
             <input type="text" id="postcode" name="postcode" placeholder="入力してください。例123-456" value="{{ old('postcode') }}" >
             <div class="add">※郵便番号を入力すると住所の一部が自動で入力されます。</div>
             <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
