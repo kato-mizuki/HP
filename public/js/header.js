@@ -29,3 +29,9 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 50); // 50ms 程度の遅延でほぼ確実に要素取得可能
   }
 });
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});

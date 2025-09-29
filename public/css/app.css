@@ -101,6 +101,23 @@
       height: auto;                                /* 高さを固定 */
       background-color: var(--main-color);         /* 背景色 */
       }
+    .hamburger {
+      display: none; /* PCでは非表示 */
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: var(--sub-color);
+      border-radius: 2px;
+    }
+
     .header.nav {
         display: flex;                             /* 要素を横並びに */                      
         width: 100%;                               /* 幅を固定 */
@@ -164,6 +181,36 @@
     .nav li:hover {
       background-color: var(--hover-color);                   /* 背景色 */
     }
+    ul.nav.show {
+      display: flex;
+    }
+
+/* スマホ表示 */
+    @media screen and (max-width: 600px) {
+      ul.nav {
+        display: none;        /* 初期は非表示 */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;            /* ロゴ下あたりに表示 */
+        right: 10px;
+        background-color: var(--main-color);
+        width: 200px;
+        padding: 10px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      }
+
+      ul.nav li {
+        justify-content: flex-start;
+        margin: 5px 0;
+        width: 100%;
+      }
+
+      .hamburger {
+        display: flex;        /* スマホで表示 */
+      }
+    }
+
 
 /* section12：footerの設定 */
     .section12{
