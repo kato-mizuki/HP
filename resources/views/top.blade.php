@@ -15,7 +15,8 @@
   <section class="section01" id="slideshow">
     <h1 class="catchcopy">
       <strong>
-        大切な資産を守る、最初の第一歩。<br>
+        大切な資産を守る、最初の第一歩。
+      <br>
         管理・活用・必要なら売却まで、ワンストップでご相談ください
       </strong>
     </h1><br><br>

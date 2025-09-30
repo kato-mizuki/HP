@@ -204,6 +204,11 @@
       left: auto;
       transform: none;      /* ← translateも消す */
     }
+    .catchcopy br {
+      line-height: 0;
+      margin: 0;
+      padding: 0;
+    }
 
     /* 下部エリアを画面下部に配置 */
     .bottom-area {
@@ -298,12 +303,18 @@
         transform: none;      /* ← translateも消す */
       }
 
-      h1 strong {
-        font-size: 15px;     /* スマホでは小さめだけど見やすく */
-        line-height: 0.4;    /* 行間を広げる */
+      strong {
+        font-size: 19px;     /* スマホでは小さめだけど見やすく */
         padding: 0 10px;     /* 端にくっつかないよう余白 */
+        line-height: 1 !important;   /* ← 強制上書き */
+        display: inline-block;       /* インライン要素だと効きにくいので */
         white-space: normal;  /* 自然に複数行OK */
         text-align: center;
+      }
+      .catchcopy br {
+        line-height: 0;
+        margin: 0;
+        padding: 0;
       }
     }
 
