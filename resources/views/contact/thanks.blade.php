@@ -25,6 +25,5 @@
     </section>
     <br><br><br><br>
     @include('footer')
-    <script src="{{ asset('java.js') }}"></script>
 </body>
 </html>

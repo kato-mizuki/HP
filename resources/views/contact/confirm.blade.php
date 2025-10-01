@@ -89,6 +89,5 @@
   <br><br>
 
   @include ('footer')
-  <script src="{{ asset('js/java.js') }}"></script>
 </body>
 </html>

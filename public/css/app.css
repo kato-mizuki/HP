@@ -199,8 +199,8 @@
 
       /* 企業ロゴの設定 */
       .logo {
-        width: 80%;         /* 基本サイズを固定 */
-        max-width: 20%;       /* 画面がすごく狭い時だけ縮小 */
+        width: 100%;         /* 基本サイズを固定 */
+        max-width: 30%;       /* 画面がすごく狭い時だけ縮小 */
         height: auto;
       }
       .logo img {
@@ -315,4 +315,49 @@
     #page-top:hover {
      background-color: var(--hover-color);                    /* 背景色 */
      color: var(--sub-color);                               /* 文字色 */
+    }
+/* タブレット・スマホ用（幅768px以下） */
+    @media (max-width: 768px) {
+      footer {
+        display: flex;
+        flex-wrap: wrap;          /* 横並びでも折り返し可能に */
+        gap: 10px;                /* 要素間の余白 */
+      }
+      .footer-inner {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo2 {
+        margin-top: 10%;
+        width: 45%;  /* ロゴを大きくして画面に合わせる */
+        height: 60%;
+      }
+
+      .footer-information {
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap; /* 行が折り返す */
+      }
+
+      .information-item {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+      }
+      footer {
+        padding: 10px 10px; /* パディングを小さく */
+      }
+      .top-btn{
+        margin: 20px;
+      }
+      #page-top {
+        margin-top: 20px;
+        padding: 15px 15px;
+        font-size: 12px;
+      }
+
+      .information-item {
+        font-size: 12px;
+      }
     }

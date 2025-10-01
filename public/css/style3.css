@@ -21,7 +21,7 @@
     }
 
 /* 画面幅が600px以下の場合のスタイル */
-    @media screen and (min-width: 600px) {
+    @media screen and (max-width: 600px) {
       .wrapper {
         display: flex;
         gap: 2%; /* カラム間の余白 */
