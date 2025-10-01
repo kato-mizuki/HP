@@ -946,10 +946,11 @@
         font-size: 16px;
         padding: .5em 2.5em 1em;
       }
-
-      .section09 {
-        margin-left: -10%;   /* 斜め感は残すが少し控えめ */
-        padding: 0 10%;
+      .border-top{
+        margin-left: -25%;   /* PCと同じにする（はみ出しでカバー） */
+      }
+      .border-bottom{
+        margin-right: -25%;   /* PCと同じにする（はみ出しでカバー） */
       }
     }
 

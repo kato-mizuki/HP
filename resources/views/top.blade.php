@@ -289,7 +289,9 @@
   <section class="section09">
     <br>
     <div class="boder">
-      <div style="border-top: 3px dotted #E9E3DD; margin: 20px 0;"></div>
+      <div class="border-top">
+        <div style="border-top: 3px dotted #E9E3DD; margin: 20px 0;"></div>
+      </div>
     </div>
     <div class="FAQ-inner1">
       <h1>FAQ</h1>
@@ -324,7 +326,9 @@
       <br>
     </div>
     <div class="boder">
-      <div style="border-top: 3px dotted #E9E3DD; margin: 20px 0;"></div>
+      <div class="border-bottom">
+        <div style="border-top: 3px dotted #E9E3DD; margin: 20px 0;"></div>
+      </div>
     </div>
     <br>
   </section>
