@@ -66,7 +66,7 @@
       max-width: 100%;                            /* 要素の幅の最大値 */
       margin: 0 auto;                             /* ブロックレベル要素を中央揃え */
       padding: 0;                                 /* 要素内部の余白 */
-      overflow-x : hidden ;                       /* 横スクロールをできないようにする */
+      overflow-x : hidden;                       /* 横スクロールをできないようにする */
       width: 100%;
       height: 100%;
       font-family: "Yu Mincho", "Times New Roman", serif;
@@ -80,7 +80,7 @@
     hr {
       height: 2px;                                /* 高さを固定 */
       background-color: var(--main-color);                /* 背景色 */
-      width: 100% ;                               /* 幅を固定 */
+      width: 100%;                               /* 幅を固定 */
       border: none;                               /* 枠線を消す */
     }
 
@@ -106,7 +106,7 @@
       z-index: 10;                                 /* 最前面にする設定 */
       width: 20%;                                /* 幅を固定 */
       /* height: 20px;                                高さを固定 */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0) ;   /* 影の設定 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0);   /* 影の設定 */
     }
     /* カーソルを置いた時の背景色 */
     .fixed-btn:hover {
@@ -142,7 +142,7 @@
         z-index: 10;                                 /* 最前面にする設定 */
         width: 55%;                                /* 幅を固定 */
         /* height: 20px;                                高さを固定 */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0) ;   /* 影の設定 */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0);   /* 影の設定 */
       }
       /* カーソルを置いた時の背景色 */
       .fixed-btn:hover {
@@ -642,7 +642,7 @@
       margin: 10px;
       border-radius: 20px;                 /* 角の丸み */
       background-color: var(--sub-color);           /* 背景色 */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0) ;   /* 影の設定 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0);   /* 影の設定 */
       margin-top: 90px;
     }
     .plantitle{
@@ -682,7 +682,7 @@
       background-color: var(--main-color);              /* 背景色 */
       color: var(--sub-color);                         /* 文字色 */
       border-radius: 20px;                    /* 角の丸み */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0) ;   /* 影の設定 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0);   /* 影の設定 */
     }
 /* カーソルを置いた時の背景色 */
     .pln-btn:hover a{
@@ -742,8 +742,8 @@
      text-align: center;                          /* 内部のリンクテキストは中央揃え */
     }
     .center07-container .step {
-     width: 60% ;                                 /* 幅を固定 */
-     height: 60% ;                                /* 高さを固定 */
+     width: 60%;                                 /* 幅を固定 */
+     height: 60%;                                /* 高さを固定 */
     }
 
   /* テキストの設定 */
@@ -751,8 +751,8 @@
      display: flex;                                /* 要素を横並びに配置 */
      justify-content: center;                      /* コンテナ内で中央寄せ */
      flex-wrap: nowrap;                            /* アイテムの折り返し */
-     width: 90% ;                                  /* 幅を固定 */
-     height: 40% ;                                  /* 高さを固定 */
+     width: 90%;                                  /* 幅を固定 */
+     height: 40%;                                  /* 高さを固定 */
     }
     .step-item {
      background: var(--main-color);
@@ -769,8 +769,8 @@
 /* スマホ・タブレット対応 */
     @media screen and (max-width: 768px) {
       .center07-container .step {
-        width: 80% ;                                 /* 幅を固定 */
-        height: 60% ;                                /* 高さを固定 */
+        width: 80%;                                 /* 幅を固定 */
+        height: 60%;                                /* 高さを固定 */
         align-items: center;
         }
       .step-box {
@@ -845,21 +845,21 @@
   /* 画像の設定 */
     .section09 {
      text-align: center;                           /* 内部のリンクテキストは中央揃え */
-     width: 100% ;                                 /* 幅を固定 */
-     -webkit-transform: rotate(5deg) translate3d(0, 0, 0) ;
+     width: 100%;                                 /* 幅を固定 */
+     -webkit-transform: rotate(5deg) translate3d(0, 0, 0);
      background-color: var(--main-color);                    /* 背景色 */
-     margin-left: -25% ;                           /* 要素の外側の余白を設定 */
-     padding: 0 25% ;                              /* 要素内部の余白 */
-     position: relative ;                          /* 要素の現在位置を基準にした相対位置に要素を配置 */ 
-     transform: rotate(5deg) translate3d(0, 0, 0) ;
+     margin-left: -25%;                           /* 要素の外側の余白を設定 */
+     padding: 0 25%;                              /* 要素内部の余白 */
+     position: relative;                          /* 要素の現在位置を基準にした相対位置に要素を配置 */ 
+     transform: rotate(5deg) translate3d(0, 0, 0);
     }
     
     .section09 .FAQ-inner1 {
-      -webkit-transform: rotate(-5deg) translate3d(0, 0, 0) ;
-      margin: 0 auto ;                               /* ブロックレベル要素を中央揃え */
-      max-width: 100% ;                              /* 要素の幅の最大値 */
-      padding: 18px 30px 78px ;                      /* 要素内部の余白 */
-      transform: rotate(-5deg) translate3d(0, 0, 0) ;
+      -webkit-transform: rotate(-5deg) translate3d(0, 0, 0);
+      margin: 0 auto;                               /* ブロックレベル要素を中央揃え */
+      max-width: 100%;                              /* 要素の幅の最大値 */
+      padding: 18px 30px 78px;                      /* 要素内部の余白 */
+      transform: rotate(-5deg) translate3d(0, 0, 0);
       width: 820px;                                  /* 幅を固定 */
       color: var(--sub-color);
     }
@@ -901,7 +901,7 @@
      margin-left: 10px;                            /* 要素の外側の余白を設定 */
      border-bottom: 3px solid var(--sub-color);             /* 要素の下側境界線の幅、スタイル、色の設定 */
      border-right: 3px solid var(--sub-color);              /* 要素の右側境界線の幅、スタイル、色の設定 */
-     content: '' ;                                 /* ▽マーク */
+     content: '';                                 /* ▽マーク */
      transition: transform .5s;                    /* ▽マークが上・下向きになるのにかかる秒数 */
      font-size: 1.3em;
     }
@@ -912,7 +912,7 @@
     /* <p>の設定 */
     .q1 p {
      position: relative;                           /* 要素の現在位置を基準にした相対位置に要素を配置 */ /* 要素の現在位置を基準にした相対位置に要素を配置 */ 
-     transform: translateY(-10px) ;         
+     transform: translateY(-10px);         
      opacity: 0;                                   /* 要素の不透明度 */
      margin: 0;                                    /* 要素の外側の余白を設定 */
      padding: .3em 3em 1.5em;                      /* 要素内部の余白( */
@@ -1039,8 +1039,8 @@
     }
 
     .center09-container {
-     width: 50% ;                                  /* 幅を固定 */
-     height: 50% ;                                 /* 高さを固定 */
+     width: 50%;                                  /* 幅を固定 */
+     height: 50%;                                 /* 高さを固定 */
      position: center;                             /* コンテナ内で中央寄せ */
      margin: 0 auto;                               /* ブロックレベル要素を画面に対して中央ぞろえ */
     }
@@ -1083,8 +1083,8 @@
     }
 
     .information{
-      width: 63% ;                                  /* 幅を固定 */
-      height: 50% ;                                 /* 高さを固定 */
+      width: 63%;                                  /* 幅を固定 */
+      height: 50%;                                 /* 高さを固定 */
       justify-content: center;                      /* コンテナ内で中央寄せ */
       margin: 0 auto;                               /* ブロックレベル要素を画面に対して中央ぞろえ */
     }
@@ -1158,7 +1158,7 @@
       background-color: var(--main-color);                   /* 背景色 */
       color: var(--main-color);                       /* 文字色 */
       border-radius: 20px;                         /* 角の丸み */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0) ;   /* 影の設定 */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0);   /* 影の設定 */
     }
 /* カーソルを置いた時の背景色 */
     .information-btn:hover a{
