@@ -180,8 +180,10 @@
           <div class="Box">
             <p class="plantitle">喜守フリー</p>
             <strong>月額0円</strong><br>
-            <p class="plan">
+            <p class ="otoku">
               年4回（1月・4月・7月・10月）<br>
+            </p>
+            <p class="plan">
               ・巡回、報告書（写真付き）<br>
               ・管理中看板設置<br>
               ・お問い合わせ対応代行<br>
@@ -248,11 +250,11 @@
       <img src="{{ asset ('img/service_nagare.png') }}" alt="ご利用までの流れ" class="step">
     </div>
     <ul class="step-box">
-      <li class="step-item">お問い合わせ<br><br>本ページから、ご相談内容、お客様情報をご入力の上、お問い合わせください。</li>
-      <li class="step-item">お打ち合わせ<br><br>本ページから、ご入力いただいた情報から最適な管理プランをご提案いたします。</li>
-      <li class="step-item">ご契約<br><br>ご選択いただいたプランを基に、正式なお手続きを進めます。</li>
-      <li class="step-item">お支払い<br><br>初月のみ先払い、その後は毎月のお支払いとなります。</li>
-      <li class="step-item">サービス開始<br><br>お支払いが確認でき次第、サービスを開始いたします。</li>
+      <li class="step-item">①お問い合わせ<br>本ページから、ご相談内容、お客様情報をご入力の上、お問い合わせください。</li>
+      <li class="step-item">②お打ち合わせ<br>本ページから、ご入力いただいた情報から最適な管理プランをご提案いたします。</li>
+      <li class="step-item">③ご契約<br>ご選択いただいたプランを基に、正式なお手続きを進めます。</li>
+      <li class="step-item">④お支払い<br>初月のみ先払い、その後は毎月のお支払いとなります。</li>
+      <li class="step-item">⑤サービス開始<br>お支払いが確認でき次第、サービスを開始いたします。</li>
     </ul>
     <br>
     <hr>
@@ -354,7 +356,7 @@
   <section class="section11">
     <h1>お問い合わせ</h1>
     <div class="center09-container">
-      <img src="{{ asset('img/2025-08-12 145539.png') }}" class="お問い合わせ"> 
+      <img src="{{ asset('img/2025-08-12 145539.png') }}" class="toiawase"> 
     </div>
     <p class="click"><u>各項目を入力後、ページ下部の「確認画面へ」ボタンをクリックしてください。</u></p>
     <br>
@@ -370,11 +372,11 @@
                 <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
                 <p id="inquiryError" class="error">&nbsp;</p>
                 <input type="checkbox" id="inq1" name="inquiry[]" value="空き家の管理に関するご相談" {{ in_array('空き家の管理に関するご相談', old('inquiry', [])) ? 'checked' : '' }}>
-                <label for="inq1">例: 空き家の管理に関するご相談</label><br>
+                <label for="inq1">空き家の管理に関するご相談</label><br>
                 <input type="checkbox" id="inq2" name="inquiry[]" value="空き家の売却に関するご相談" {{ in_array('空き家の売却に関するご相談', old('inquiry', [])) ? 'checked' : '' }}>
-                <label for="inq2">例: 空き家の売却に関するご相談</label><br>
+                <label for="inq2">空き家の売却に関するご相談</label><br>
                 <input type="checkbox" id="inq3" name="inquiry[]" value="その他"{{ in_array('その他', old('inquiry', [])) ? 'checked' : '' }}>
-                <label for="inq3">例: その他</label>
+                <label for="inq3">その他</label>
               </div>
               <!-- エラーメッセージが「ある・ない」で高さが変わらないように設定 -->
               <p id="commentError" class="error">&nbsp;</p>
