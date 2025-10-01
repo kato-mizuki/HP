@@ -955,116 +955,64 @@
 
 /* section10：クロージングの設定 */
     .section10 {
-      background: linear-gradient(180deg, var(--bg) 0%, #e5e5e5 100%);
-      padding: 56px 20px;
-      color: var(--text);
-      font-family: "Yu Mincho", "Noto Serif JP", "Times New Roman", serif;
-    }
-
-    /* 内側の中央ラップ */
-    .section10 .wrap {
-      max-width: var(--wrap-max);
-      margin: 0 auto;
-      text-align: center;
-      box-sizing: border-box;
+      padding: 56px 20px;        /* 内側の空白 */
+      color: var(--text-color); /* 文字色 */
+      font-family: "Yu Mincho", "Noto Serif JP", "Times New Roman", serif; /* フォント */
+      text-align: center;       /*文字の中央揃え */
     }
 
     /* 見出し */
     .section10 h2 {
-      font-size: 1.9rem;
-      line-height: 1.3;
-      margin: 0 0 18px;
-      color: var(--text);
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-size: 1.9rem;          /* 見出しの文字サイズを大きめに */
+      line-height: 1.4;           /* 行間を少し広めに */
+      margin: 0 0 24px;           /* 下に24pxの余白 */
+      color: var(--main-color);   /* 文字色 */
+      font-weight: 700;           /* 太字で強調 */
+      letter-spacing: 0.02em;     /* 少し文字間隔を広げて可読性UP */  
+      border-bottom: 2px solid var(--main-color);/* 下に赤い下線をつけてアクセント */
+      display: inline-block;      /* 下線が文字幅だけになるようにインラインブロック化 */
+      padding-bottom: 6px;        /* 下線との間隔を確保 */
     }
 
     /* リード文 */
     .section10 .lead {
-      font-size: 1.05rem;
-      line-height: 1.9;
-      color: var(--muted);
-      margin: 0 auto 18px;
-      max-width: 820px;
-      text-align: center;
-      letter-spacing: 0.01em;
+      font-size: 1.05rem;         /* 少し大きめの本文サイズ */
+      line-height: 1.9;           /* 行間を広くして読みやすく */
+      color: var(--text-color);   /* 文字色 */
+      margin: 0 auto 20px;        /* 下に20px余白を取り、中央寄せ */
+      max-width: 760px;           /* 最大幅を制限して横に広がりすぎないようにする */
+      text-align: center;         /* 中央揃え */
+      letter-spacing: 0.01em;     /* ほんの少し文字間隔を空けて可読性UP */
     }
 
-    /* CTA ブロック全体 */
+    /* CTA ブロック */
     .section10 .cta {
-      margin-top: 28px;
-      padding: 20px;
-      background: #e5e5e5;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      display: inline-block; 
-      text-align: left;
-      max-width: 800px;
-      width: 100%;
+      margin-top: 36px;           /* 上に36px余白 */
+      padding: 24px;              /* 内側の余白を24pxに設定 */
+      background: #fff;         /* 背景は白で目立たせる */
+      border-left: 5px solid var(--main-color);/* 左側に赤のラインを入れて強調 */
+      border-radius: 6px;         /* 角を少し丸める */
+      box-shadow: 0 4px 12px rgba(60, 15, 10, 0.1); /* ほんのり影をつけて浮かせる */
+      text-align: left;           /* テキストを左揃え */
+      max-width: 760px;           /* 横幅を制限して見やすくする */
+      margin-left: auto;          /* 左右中央寄せ */
+      margin-right: auto;
     }
 
-    /* CTA内の見出し・本文 */
+    /* CTA内の見出し */
     .section10 .cta h3 {
-      margin: 0 0 8px;
-      font-size: 1.15rem;
-      color: var(--text);
-      font-weight: 700;
-      position: relative;
-      padding-left: 28px;
+      margin: 0 0 10px;         /* 下に10px余白 */
+      font-size: 1.2rem;        /* 少し大きめにしてサブ見出し感を出す */
+      color: var(--main-color); /* 文字色 */
+      font-weight: 700;         /* 太字 */
     }
-    .section10 .cta h3::before {
-      content: "💬";
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+
+    /* CTA内の本文 */
     .section10 .cta p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-
-    /* レスポンシブ調整 */
-    @media (max-width: 880px) {
-      .section10 {
-        padding: 42px 18px;
-      }
-      .section10 h2 {
-        font-size: 1.6rem;
-      }
-      .section10 .cta {
-        padding: 18px;
-        margin-top: 28px;
-        padding: 20px;
-        background: #e5e5e5;
-        border-radius: 12px;
-        box-shadow: var(--shadow);
-        display: inline-block; 
-        text-align: left;
-        max-width: 800px;
-        width: 100%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .section10 h2 {
-        font-size: 1.35rem;
-      }
-      .section10 .lead {
-        font-size: 1rem;
-      }
-      .section10 .cta {
-        text-align: left;
-        background: #e5e5e5;
-        border-radius: 12px;
-        box-shadow: var(--shadow);
-        display: inline-block; 
-        text-align: left;
-        max-width: 400px;
-        width: 80%;
-        margin: 0 10px;
-      }
+      margin: 0;                /* 余白なし */
+      color: var(--text-color); /* 文字色 */
+      font-size: 1rem;          /* 標準の本文サイズ */
+      line-height: 1.7;         /* 行間を広めにして読みやすさを確保 */
     }
 
 /* section11：お問い合わせの設定 */
