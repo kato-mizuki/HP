@@ -1,6 +1,9 @@
 /* ------------------------------------
  全体の設定 
 ------------------------------------*/
+    html {
+      scroll-behavior: smooth;
+    }
     #header {
       display: flex;
       justify-content: space-between; /* 左右に配置 */
