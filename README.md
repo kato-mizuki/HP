@@ -74,12 +74,12 @@
    
  ②\app\Http\Controllers\ContactController.php も以下の箇所を修正し設定してください:
 
-   public function send(Request $request)~~
-   try {
-            Mail::to('@gmail.com') // 管理者宛
-            ~~
-   }
-   
+    public function send(Request $request)~~  
+    try {  
+            Mail::to('@gmail.com') // 管理者宛  
+            ~~  
+    }
+
 - その他のメールサービス（Yahoo, Outlook, iCloud など）にも対応可能です。  
 
 ## ライセンス
