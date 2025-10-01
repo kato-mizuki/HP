@@ -76,7 +76,7 @@
 
     public function send(Request $request)~~  
     try {  
-            Mail::to('@gmail.com') // 管理者宛  
+            Mail::to('your_email@gmail.com') // 管理者宛  
             ~~  
     }
 
