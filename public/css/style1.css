@@ -1189,6 +1189,9 @@
     }
 /* スマホ・タブレット表示用設定 */
     @media screen and (max-width: 768px) {
+      .section11{
+        background: var(--sub-color);
+      }
       .center09-container {
         width: 100%;            /* 親コンテナいっぱいに広げる */
         max-width: 400px;       /* 画像の最大幅を設定 */
