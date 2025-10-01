@@ -35,10 +35,9 @@
 
 ## 使用技術
 
-- PHP 8.0.30 / Laravel 9.52.20
+- PHP 8.2.29 / Laravel 10.49.0
 - HTML5 / CSS3 / JavaScript
 - Laravel Blade テンプレート
-- ClosedXML（Excel 出力）
 - Composer パッケージ管理
 
 ## セットアップ方法
