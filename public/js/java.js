@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const contactSection = document.querySelector('.section11');
 
   window.addEventListener('scroll', () => {
-    const contactBottom = contactSection.getBoundingClientRect().top + window.scrollY; // ページ上端からsection11の底まで
+    const contactBottom = contactSection.getBoundingClientRect().top + window.scrollY; // ページ上端からsection11まで
     const scrollY = window.scrollY + window.innerHeight; // 画面下端の位置
 
     if (scrollY >= contactBottom) {
