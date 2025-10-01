@@ -61,7 +61,7 @@
     php artisan serve  
 
 ## メール送信設定
- .envを以下のように設定してください（例Gmail）:
+ ①.envを以下のように設定してください（例Gmail）:
 
     MAIL_MAILER=smtp
     MAIL_HOST=smtp.gmail.com
@@ -71,6 +71,14 @@
     MAIL_ENCRYPTION=tls
     MAIL_FROM_ADDRESS=your_email@gmail.com
     MAIL_FROM_NAME="サイト名"
+   
+ ②\app\Http\Controllers\ContactController.php も以下の箇所を修正し設定してください:
+
+   public function send(Request $request)~~
+   try {
+            Mail::to('@gmail.com') // 管理者宛
+            ~~
+   }
    
 - その他のメールサービス（Yahoo, Outlook, iCloud など）にも対応可能です。  
 
