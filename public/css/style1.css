@@ -2,7 +2,7 @@
  全体の設定 
 ------------------------------------*/
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: auto;
     }
     #header {
       display: flex;

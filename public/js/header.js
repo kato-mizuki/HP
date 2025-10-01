@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
       if (window.location.pathname.endsWith(link.getAttribute('href'))) {
             // 同ページ内スクロール → URL は変更しない
             const el = document.getElementById(targetId);
-            if (el) el.scrollIntoView({ block: "start" });
+            if (el) el.scrollIntoView({ block: "start", behavior: "smooth" });
       } else {
             // 他ページジャンプ
             sessionStorage.setItem("scrollToJump", targetId);
@@ -26,14 +26,14 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 他ページからのスクロール
-  const scrollId = sessionStorage.getItem("scrollToJump");
-  if (scrollId) {
-    // 1秒後にスクロールさせる方法（body全体が読み込まれた後）
-    setTimeout(() => {
-      const el = document.getElementById(scrollId);
-      if (el) el.scrollIntoView({ block: "start" });
-      sessionStorage.removeItem("scrollToJump");
-    }, 200); // 50ms 程度の遅延でほぼ確実に要素取得可能
-  }
+  // 遷移先ページで
+  window.addEventListener("load", () => {
+    const scrollId = sessionStorage.getItem("scrollToJump");
+    if (!scrollId) return;
+
+    const el = document.getElementById(scrollId);
+    if (el) el.scrollIntoView({ block: "start" }); // smooth なしで即ジャンプ
+
+    sessionStorage.removeItem("scrollToJump");
+  });
 });
