@@ -692,7 +692,7 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 1.0);   /* 影の設定 */
     }
 /* カーソルを置いた時の背景色 */
-    .pln-btn:hover a{
+    .pln-btn a:hover{
        background-color: var(--hover-color);             /* 背景色 */
     }
 

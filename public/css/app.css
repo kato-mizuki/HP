@@ -317,7 +317,7 @@
       padding: 0;
     }
     /* SNSリンクの中身 */
-    i {
+    .sns-links i {
       font-size: 15px; /* アイコンサイズ */
       margin: 0;
       padding: 0;

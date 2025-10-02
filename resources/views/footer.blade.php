@@ -9,7 +9,7 @@
                     <ul class="footer-information">
                         <li class="information-item">営業時間<br>xx:xx ~ xx:xx</li>
                         <li class="information-item">所在地<br>xxxxxxxxxxxxx</li>
-                        <li class="information-item">TEL📞<br>xxx-xxx-xxxx</li>
+                        <li class="information-item">TEL <i class="fa-solid fa-phone"></i><br>xxx-xxx-xxxx</li>
                         <li class="information-item">Mail✉<br>xxx-xxx-xxxx</li>
                         <div class="top-btn">
                             <li class="information-item"><a href="{{route('top')}}" id="page-top">TOP</a></li>
