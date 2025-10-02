@@ -183,7 +183,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(255, 255, 255, 0.5);
+      background:  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
       z-index: 0;
     }
 
@@ -206,6 +206,7 @@
       top: auto;
       left: auto;
       transform: none;      /* ← translateも消す */
+      line-height: 1.4;
     }
     .catchcopy br {
       line-height: 0;
@@ -224,6 +225,7 @@
       gap: 2rem;                  /* 画像と文章の間隔 */
       margin-top: 30%;
       padding-top: 10%;
+      color: var(--sub-color);
     }
 
     .sabucopi {
@@ -388,6 +390,10 @@
       padding: 0;
     }
 
+    .question strong{
+      font-weight: bold;
+    }
+
     .section02 p {
         align-items: flex-start;
         transform: translateX(-30%);
@@ -444,7 +450,7 @@
     .solution-points {
       display: flex;
       justify-content: center;
-      gap: 20px;           /* カード間の余白 */
+      gap: 30px;           /* カード間の余白 */
       flex-wrap: wrap;     /* スマホでは縦並びになる */
     }
 
@@ -472,9 +478,10 @@
     .point p {
       font-size: 15px;
       color: var(--text-color);
+      line-height: 1.6;
     }
 
-    .kaitetubtn .jump-link {
+    .kaiketubtn .jump-link {
       display: inline-flex;          /* flexboxにする */
       align-items: center;           /* 縦方向中央揃え */
       justify-content: center;       /* 横方向中央揃え */
@@ -486,7 +493,7 @@
       font-size: 16px;
     }
 
-    .kaitetubtn .jump-link:hover {
+    .kaiketubtn .jump-link:hover {
       background-color: var(--hover-color);
     }
 

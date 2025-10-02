@@ -271,7 +271,7 @@
       display: flex;                               /* 要素を横並びに配置 */
       max-width: 800px;                            /* 要素の幅の最大値 */
       margin: 0 auto;                              /* ブロックレベル要素を中央揃え */
-      justify-content: center;                     /* コンテナ内で中央寄せ */
+      justify-content: space-between;               /* 左右に分ける */
       flex-wrap: nowrap;                           /* アイテムの折り返し */
       width: 90%;                                 /* 幅を固定 */
       height: 90%;                                 /* 高さを固定 */
@@ -300,7 +300,29 @@
     li {
       list-style: none;                            /* デフォルトマーカーを削除 */
     }
-    
+    /* snsマークの設定 */
+    .sns{
+      margin-left: auto; /* 左の余白を自動で広げて右端に寄せる */
+      display: flex;     /* アイコンを横並びにする場合 */
+    }
+    .sns-links{
+      display: flex;   /* 横並びにする */
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 0;
+    }
+    .sns-links a{
+      margin: 10px;
+      padding: 0;
+    }
+    /* SNSリンクの中身 */
+    i {
+      font-size: 15px; /* アイコンサイズ */
+      margin: 0;
+      padding: 0;
+      gap: 0;
+    }       
     /*ページトップボタンの設定*/
     #page-top {
       color: var(--sub-color);                              /* 文字色 */

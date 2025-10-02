@@ -6,6 +6,7 @@
     <title>TOP</title>
     <link rel="stylesheet" href="{{ asset('css/style1.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -59,9 +60,9 @@
         <img src="{{ asset('img/house_boroboro.png') }}" alt="空き家" class="akiya">
       </div>
       <div class="question">
-        <p>✅ 固定資産税だけかかっていませんか？</p> 
-        <p>✅ 老朽化して費用やトラブルに繋がることも… </p>  
-        <p>✅ 誰も教えてくれません。あなたの家は大丈夫ですか？</p>
+        <p>✅ <strong>固定資産税だけ</strong>かかっていませんか？</p> 
+        <p>✅ <strong>老朽化</strong>して費用やトラブルに繋がることも… </p>  
+        <p>✅ 誰も教えてくれません。<strong>あなたの家は大丈夫ですか？</strong></p>
       </div>
       <br>
       <br>
@@ -90,7 +91,7 @@
       </div>
     </div>
     <br>
-    <div class="kaitetubtn">
+    <div class="kaiketubtn">
       <a href="#" 
         class="jump-link" 
         data-target="jump2">プラン内容を見る</a>
