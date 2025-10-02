@@ -6,6 +6,7 @@
     <title>送信確認画面</title>
     <link rel="stylesheet" href="{{ asset('css/style3.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     @include('header')
